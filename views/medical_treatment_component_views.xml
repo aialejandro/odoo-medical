@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Treatment Component Views -->
+    <record id="view_medical_treatment_component_tree" model="ir.ui.view">
+        <field name="name">medical.treatment.component.tree</field>
+        <field name="model">medical.treatment.component</field>
+        <field name="arch" type="xml">
+            <list default_order="sequence">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="session_count"/>
+                <field name="description"/>
+                <field name="duration_minutes"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_treatment_component_form" model="ir.ui.view">
+        <field name="name">medical.treatment.component.form</field>
+        <field name="model">medical.treatment.component</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_sessions" 
+                                type="object" 
+                                class="oe_stat_button" 
+                                icon="fa-list-alt"
+                                invisible="session_count == 0">
+                            <field name="session_count" widget="statinfo" string="Sessions"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Component name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="session_ids" widget="many2many_tags"/>
+                            <field name="sequence"/>
+                            <field name="duration_minutes"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sessions" name="sessions">
+                            <field name="session_ids" mode="list,form">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="treatment_id"/>
+                                    <field name="sequence"/>
+                                    <field name="estimated_duration"/>
+                                    <field name="active"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="Add component description..."/>
+                        </page>
+                        <page string="Instructions" name="instructions">
+                            <field name="instructions" placeholder="Add detailed instructions..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_medical_treatment_component" model="ir.actions.act_window">
+        <field name="name">Treatment Components</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.treatment.component</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new treatment component
+            </p>
+            <p>
+                Define individual components that make up treatment sessions.
+            </p>
+        </field>
+    </record>
+</odoo>

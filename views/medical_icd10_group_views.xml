@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ICD-10 Group Tree View -->
+    <record id="view_medical_icd10_group_tree" model="ir.ui.view">
+        <field name="name">medical.icd10.group.tree</field>
+        <field name="model">medical.icd10.group</field>
+        <field name="arch" type="xml">
+            <list string="ICD-10 Groups" create="true" edit="true" delete="true">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="description"/>
+                <field name="parent_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ICD-10 Group Form View -->
+    <record id="view_medical_icd10_group_form" model="ir.ui.view">
+        <field name="name">medical.icd10.group.form</field>
+        <field name="model">medical.icd10.group</field>
+        <field name="arch" type="xml">
+            <form string="ICD-10 Group">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="code"/>
+                            <field name="parent_id"/>
+                            <field name="sequence"/>
+                        </group>
+                        <group>
+                            <field name="icd10_count"/>
+                            <field name="total_icd10_count"/>
+                        </group>
+                    </group>
+                    <field name="description" placeholder="Group description..."/>
+                    
+                    <notebook>
+                        <page string="Child Groups" name="child_groups">
+                            <field name="child_ids">
+                                <list>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="icd10_count"/>
+                                    <field name="total_icd10_count"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="ICD-10 Codes" name="icd10_codes">
+                            <field name="icd10_ids">
+                                <list>
+                                    <field name="code"/>
+                                    <field name="description"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ICD-10 Group Search View -->
+    <record id="view_medical_icd10_group_search" model="ir.ui.view">
+        <field name="name">medical.icd10.group.search</field>
+        <field name="model">medical.icd10.group</field>
+        <field name="arch" type="xml">
+            <search string="Search ICD-10 Groups">
+                <field name="name" string="Group" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                <field name="parent_id"/>
+                <field name="code"/>
+                <separator/>
+                <filter string="Top Level Groups" name="top_level" domain="[('parent_id', '=', False)]"/>
+                <filter string="Child Groups" name="child_groups" domain="[('parent_id', '!=', False)]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Parent Group" name="group_by_parent" context="{'group_by': 'parent_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ICD-10 Group Action -->
+    <record id="action_medical_icd10_group" model="ir.actions.act_window">
+        <field name="name">ICD-10 Groups</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.icd10.group</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_medical_icd10_group_search"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first ICD-10 group!
+            </p>
+            <p>
+                ICD-10 groups help organize medical codes into logical categories.
+                You can create hierarchical groups with parent-child relationships.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_medical_icd10_group"
+              name="ICD-10 Groups"
+              parent="menu_medical_configuration"
+              action="action_medical_icd10_group"
+              sequence="10"/>
+</odoo>

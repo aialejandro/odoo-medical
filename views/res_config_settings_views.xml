@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_medical" model="ir.ui.view">
+        <field name="name">res.config.settings.medical.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Medical" string="Medical" name="medical_settings">
+                    <block title="Medical Consultations" name="medical_consultation_setting_container">
+                        <setting string="Default Medical Consultation Parameters" help="Configure default parameters for medical consultations">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="medical_default_consultation_product_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_consultation_product_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="medical_default_consultation_tax_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_consultation_tax_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="medical_default_consultation_journal_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_consultation_journal_id"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Medical Therapies" name="medical_therapy_setting_container">
+                        <setting string="Default Medical Therapy Parameters" help="Configure default parameters for medical therapies">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="medical_default_therapy_product_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_therapy_product_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="medical_default_therapy_tax_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_therapy_tax_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="medical_default_therapy_journal_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_therapy_journal_id"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="X-ray Services" name="medical_xray_setting_container">
+                        <setting string="Default X-ray Parameters" help="Configure default parameters for X-ray services">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label for="medical_default_xray_product_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_xray_product_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="medical_default_xray_tax_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_xray_tax_id"/>
+                                </div>
+                                <div class="row">
+                                    <label for="medical_default_xray_journal_id" class="col-3 o_light_label"/>
+                                    <field name="medical_default_xray_journal_id"/>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

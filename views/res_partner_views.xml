@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_medical_history" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.medical.history</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//div[@name='button_box']" position="inside">
+                <button name="%(action_medical_consultation)d" type="action" class="oe_stat_button" icon="fa-stethoscope"
+                        context="{'search_default_patient_id': id, 'default_patient_id': id}">
+                    <field string="Consultations" name="consultation_count" widget="statinfo"/>
+                </button>
+                <button name="%(action_medical_history)d" type="action" class="oe_stat_button" icon="fa-clipboard"
+                        context="{'search_default_partner_id': id, 'default_partner_id': id}">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">History</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Medical History">
+                    <group>
+                        <group>
+                            <field name="medical_record_number" readonly="1"/>
+                            <field name="age" readonly="1"/>
+                            <field name="weight_kg"/>
+                        </group>
+                        <group>
+                            <field name="weight_lb"/>
+                        </group>
+                    </group>
+                    <field name="medical_history_ids">
+                        <list editable="bottom">
+                            <field name="date_record"/>
+                            <field name="event_date"/>
+                            <field name="category"/>
+                            <field name="name"/>
+                            <field name="icd10_id"/>
+                            <field name="state"/>
+                        </list>
+                        <form string="History">
+                            <sheet>
+                                <group>
+                                    <group>
+                                        <field name="category"/>
+                                        <field name="name"/>
+                                        <field name="icd10_id" options="{'no_create_edit': True}"/>
+                                        <field name="state"/>
+                                    </group>
+                                    <group>
+                                        <field name="date_record"/>
+                                        <field name="event_date"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <field name="description" nolabel="1"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,30 +1,106 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="odoo-medical.odoo-medical">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
-
-          <record id="object1" model="odoo-medical.odoo-medical">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
-
-          <record id="object2" model="odoo-medical.odoo-medical">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="odoo-medical.odoo-medical">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="odoo-medical.odoo-medical">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <!-- ICD-10 Groups Demo Data -->
+        
+        <!-- Top Level Groups (Chapters) -->
+        <record id="icd10_group_infectious" model="medical.icd10.group">
+            <field name="name">Certain infectious and parasitic diseases</field>
+            <field name="code">A00-B99</field>
+            <field name="sequence">1</field>
+            <field name="description">Diseases generally recognized as communicable or transmissible.</field>
+        </record>
+        
+        <record id="icd10_group_neoplasms" model="medical.icd10.group">
+            <field name="name">Neoplasms</field>
+            <field name="code">C00-D49</field>
+            <field name="sequence">2</field>
+            <field name="description">Abnormal growth of cells and tissues, including benign and malignant tumors.</field>
+        </record>
+        
+        <record id="icd10_group_blood" model="medical.icd10.group">
+            <field name="name">Diseases of the blood and blood-forming organs</field>
+            <field name="code">D50-D89</field>
+            <field name="sequence">3</field>
+            <field name="description">Disorders affecting blood, bone marrow, and immune system.</field>
+        </record>
+        
+        <record id="icd10_group_endocrine" model="medical.icd10.group">
+            <field name="name">Endocrine, nutritional and metabolic diseases</field>
+            <field name="code">E00-E89</field>
+            <field name="sequence">4</field>
+            <field name="description">Disorders of endocrine glands, nutrition, and metabolism.</field>
+        </record>
+        
+        <!-- Sub-groups for Infectious Diseases -->
+        <record id="icd10_subgroup_intestinal" model="medical.icd10.group">
+            <field name="name">Intestinal infectious diseases</field>
+            <field name="code">A00-A09</field>
+            <field name="parent_id" ref="icd10_group_infectious"/>
+            <field name="sequence">10</field>
+        </record>
+        
+        <record id="icd10_subgroup_tuberculosis" model="medical.icd10.group">
+            <field name="name">Tuberculosis</field>
+            <field name="code">A15-A19</field>
+            <field name="parent_id" ref="icd10_group_infectious"/>
+            <field name="sequence">20</field>
+        </record>
+        
+        <!-- Sub-groups for Neoplasms -->
+        <record id="icd10_subgroup_malignant_digestive" model="medical.icd10.group">
+            <field name="name">Malignant neoplasms of digestive organs</field>
+            <field name="code">C15-C26</field>
+            <field name="parent_id" ref="icd10_group_neoplasms"/>
+            <field name="sequence">10</field>
+        </record>
+        
+        <record id="icd10_subgroup_malignant_respiratory" model="medical.icd10.group">
+            <field name="name">Malignant neoplasms of respiratory and intrathoracic organs</field>
+            <field name="code">C30-C39</field>
+            <field name="parent_id" ref="icd10_group_neoplasms"/>
+            <field name="sequence">20</field>
+        </record>
+        
+        <!-- ICD-10 Codes Demo Data -->
+        <record id="icd10_cholera" model="medical.icd10">
+            <field name="code">A00</field>
+            <field name="description">Cholera</field>
+            <field name="group_id" ref="icd10_subgroup_intestinal"/>
+        </record>
+        
+        <record id="icd10_typhoid" model="medical.icd10">
+            <field name="code">A01.0</field>
+            <field name="description">Typhoid fever</field>
+            <field name="group_id" ref="icd10_subgroup_intestinal"/>
+        </record>
+        
+        <record id="icd10_tb_lung" model="medical.icd10">
+            <field name="code">A15.0</field>
+            <field name="description">Tuberculosis of lung</field>
+            <field name="group_id" ref="icd10_subgroup_tuberculosis"/>
+        </record>
+        
+        <record id="icd10_stomach_cancer" model="medical.icd10">
+            <field name="code">C16</field>
+            <field name="description">Malignant neoplasm of stomach</field>
+            <field name="group_id" ref="icd10_subgroup_malignant_digestive"/>
+        </record>
+        
+        <record id="icd10_lung_cancer" model="medical.icd10">
+            <field name="code">C34</field>
+            <field name="description">Malignant neoplasm of bronchus and lung</field>
+            <field name="group_id" ref="icd10_subgroup_malignant_respiratory"/>
+        </record>
+        
+        <record id="icd10_diabetes_type2" model="medical.icd10">
+            <field name="code">E11</field>
+            <field name="description">Type 2 diabetes mellitus</field>
+            <field name="group_id" ref="icd10_group_endocrine"/>
+        </record>
+        
+        <record id="icd10_hypertension" model="medical.icd10">
+            <field name="code">I10</field>
+            <field name="description">Essential (primary) hypertension</field>
+        </record>
     </data>
 </odoo>

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- =========================== -->
+        <!-- ICD-10 GROUPS (Hierarchy)  -->
+        <!-- =========================== -->
+        
+        <!-- Main Chapter: A00-B99 CIERTAS ENFERMEDADES INFECCIOSAS Y PARASITARIAS -->
+        <record id="icd10_group_A" model="medical.icd10.group">
+            <field name="name">CIERTAS ENFERMEDADES INFECCIOSAS Y PARASITARIAS</field>
+            <field name="code">A</field>
+            <field name="sequence">1</field>
+            <field name="description">Enfermedades generalmente reconocidas como transmisibles o contagiosas (A00-B99)</field>
+        </record>
+
+        <!-- Sub-groups under A -->
+        <record id="icd10_group_A0" model="medical.icd10.group">
+            <field name="name">ENFERMEDADES INFECCIOSAS INTESTINALES</field>
+            <field name="code">A0</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">1</field>
+            <field name="description">Enfermedades infecciosas que afectan principalmente el tracto gastrointestinal (A00-A09)</field>
+        </record>
+
+        <record id="icd10_group_A1" model="medical.icd10.group">
+            <field name="name">TUBERCULOSIS</field>
+            <field name="code">A1</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">2</field>
+            <field name="description">Infecciones causadas por Mycobacterium tuberculosis (A15-A19)</field>
+        </record>
+
+        <record id="icd10_group_A2" model="medical.icd10.group">
+            <field name="name">CIERTAS ZOONOSIS BACTERIANAS</field>
+            <field name="code">A2</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">3</field>
+            <field name="description">Enfermedades bacterianas transmitidas de animales a humanos (A20-A28)</field>
+        </record>
+
+        <record id="icd10_group_A3" model="medical.icd10.group">
+            <field name="name">OTRAS ENFERMEDADES BACTERIANAS</field>
+            <field name="code">A3</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">4</field>
+            <field name="description">Otras enfermedades causadas por bacterias (A30-A49)</field>
+        </record>
+
+        <record id="icd10_group_A5" model="medical.icd10.group">
+            <field name="name">INFECCIONES CON MODO DE TRANSMISIÓN PREDOMINANTEMENTE SEXUAL</field>
+            <field name="code">A5</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">5</field>
+            <field name="description">Infecciones de transmisión sexual (A50-A64)</field>
+        </record>
+
+        <record id="icd10_group_A6" model="medical.icd10.group">
+            <field name="name">OTRAS ENFERMEDADES DEBIDAS A ESPIROQUETAS</field>
+            <field name="code">A6</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">6</field>
+            <field name="description">Enfermedades causadas por espiroquetas (A65-A69)</field>
+        </record>
+
+        <record id="icd10_group_A7" model="medical.icd10.group">
+            <field name="name">OTRAS ENFERMEDADES CAUSADAS POR CLAMIDIAS</field>
+            <field name="code">A7</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">7</field>
+            <field name="description">Infecciones por Chlamydia (A70-A74)</field>
+        </record>
+
+        <record id="icd10_group_A75" model="medical.icd10.group">
+            <field name="name">RICKETTSIOSIS</field>
+            <field name="code">A75</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">8</field>
+            <field name="description">Enfermedades causadas por rickettsia (A75-A79)</field>
+        </record>
+
+        <record id="icd10_group_A8" model="medical.icd10.group">
+            <field name="name">INFECCIONES VIRALES Y POR PRIONES DEL SISTEMA NERVIOSO CENTRAL</field>
+            <field name="code">A8</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">9</field>
+            <field name="description">Infecciones virales del sistema nervioso central (A80-A89)</field>
+        </record>
+
+        <record id="icd10_group_A9" model="medical.icd10.group">
+            <field name="name">FIEBRES VIRALES TRANSMITIDAS POR ARTRÓPODOS Y FIEBRES VIRALES HEMORRÁGICAS</field>
+            <field name="code">A9</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">10</field>
+            <field name="description">Fiebres virales transmitidas por vectores (A90-A99)</field>
+        </record>
+
+        <!-- Groups starting with B -->
+        <record id="icd10_group_B0" model="medical.icd10.group">
+            <field name="name">INFECCIONES VIRALES CARACTERIZADAS POR LESIONES DE PIEL Y DE LAS MEMBRANAS MUCOSAS</field>
+            <field name="code">B0</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">11</field>
+            <field name="description">Infecciones virales de la piel y mucosas (B00-B09)</field>
+        </record>
+
+        <record id="icd10_group_B1" model="medical.icd10.group">
+            <field name="name">OTROS HERPESVIRUS HUMANOS</field>
+            <field name="code">B1</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">12</field>
+            <field name="description">Otros virus del herpes humano (B10)</field>
+        </record>
+
+        <record id="icd10_group_B15" model="medical.icd10.group">
+            <field name="name">HEPATITIS VIRAL</field>
+            <field name="code">B15</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">13</field>
+            <field name="description">Hepatitis causada por virus (B15-B19)</field>
+        </record>
+
+        <record id="icd10_group_B2" model="medical.icd10.group">
+            <field name="name">ENFERMEDAD POR VIRUS DE INMUNODEFICIENCIA HUMANA [VIH]</field>
+            <field name="code">B2</field>
+            <field name="parent_id" ref="icd10_group_A"/>
+            <field name="sequence">14</field>
+            <field name="description">Infección por VIH (B20)</field>
+        </record>
+
+        <!-- ===================== -->
+        <!-- ICD-10 CODES         -->
+        <!-- ===================== -->
+
+        <!-- A00 - Cólera -->
+        <record id="icd10_A00" model="medical.icd10">
+            <field name="code">A00</field>
+            <field name="description">Cólera</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A00_0" model="medical.icd10">
+            <field name="code">A00.0</field>
+            <field name="description">Cólera debido a Vibrio cholerae 01, biotipo cholerae</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A00_1" model="medical.icd10">
+            <field name="code">A00.1</field>
+            <field name="description">Cólera debido a Vibrio cholerae 01, biotipo El Tor</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A00_9" model="medical.icd10">
+            <field name="code">A00.9</field>
+            <field name="description">Cólera, no especificado</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A01 - Fiebres tifoidea y paratifoidea -->
+        <record id="icd10_A01" model="medical.icd10">
+            <field name="code">A01</field>
+            <field name="description">Fiebres tifoidea y paratifoidea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_0" model="medical.icd10">
+            <field name="code">A01.0</field>
+            <field name="description">Fiebre tifoidea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_00" model="medical.icd10">
+            <field name="code">A01.00</field>
+            <field name="description">Fiebre tifoidea, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_01" model="medical.icd10">
+            <field name="code">A01.01</field>
+            <field name="description">Meningitis tifoidea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_02" model="medical.icd10">
+            <field name="code">A01.02</field>
+            <field name="description">Fiebre tifoidea con afectación cardiaca</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_03" model="medical.icd10">
+            <field name="code">A01.03</field>
+            <field name="description">Neumonía tifoidea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_04" model="medical.icd10">
+            <field name="code">A01.04</field>
+            <field name="description">Artritis tifoidea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A01_05" model="medical.icd10">
+            <field name="code">A01.05</field>
+            <field name="description">Osteomielitis tifoidea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A02 - Otras infecciones debidas a Salmonella -->
+        <record id="icd10_A02" model="medical.icd10">
+            <field name="code">A02</field>
+            <field name="description">Otras infecciones debidas a Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_0" model="medical.icd10">
+            <field name="code">A02.0</field>
+            <field name="description">Enteritis debida a Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_1" model="medical.icd10">
+            <field name="code">A02.1</field>
+            <field name="description">Septicemia debida a Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_2" model="medical.icd10">
+            <field name="code">A02.2</field>
+            <field name="description">Infecciones localizadas debidas a Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_20" model="medical.icd10">
+            <field name="code">A02.20</field>
+            <field name="description">Infecciones localizadas debidas a Salmonella, no especificadas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_21" model="medical.icd10">
+            <field name="code">A02.21</field>
+            <field name="description">Meningitis por Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_23" model="medical.icd10">
+            <field name="code">A02.23</field>
+            <field name="description">Artritis por Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_24" model="medical.icd10">
+            <field name="code">A02.24</field>
+            <field name="description">Osteomielitis por Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_25" model="medical.icd10">
+            <field name="code">A02.25</field>
+            <field name="description">Pielonefritis por Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_29" model="medical.icd10">
+            <field name="code">A02.29</field>
+            <field name="description">Salmonella con otra infección localizada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_8" model="medical.icd10">
+            <field name="code">A02.8</field>
+            <field name="description">Otras infecciones especificadas debidas a Salmonella</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A02_9" model="medical.icd10">
+            <field name="code">A02.9</field>
+            <field name="description">Infección debida a Salmonella, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A03 - Shigelosis -->
+        <record id="icd10_A03" model="medical.icd10">
+            <field name="code">A03</field>
+            <field name="description">Shigelosis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A03_0" model="medical.icd10">
+            <field name="code">A03.0</field>
+            <field name="description">Shigelosis debida a Shigella dysenteriae</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A03_1" model="medical.icd10">
+            <field name="code">A03.1</field>
+            <field name="description">Shigelosis debida a Shigella flexneri</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A03_2" model="medical.icd10">
+            <field name="code">A03.2</field>
+            <field name="description">Shigelosis debida a Shigella boydii</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A03_3" model="medical.icd10">
+            <field name="code">A03.3</field>
+            <field name="description">Shigelosis debida a Shigella sonnei</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A03_8" model="medical.icd10">
+            <field name="code">A03.8</field>
+            <field name="description">Otras shigelosis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A03_9" model="medical.icd10">
+            <field name="code">A03.9</field>
+            <field name="description">Shigelosis de tipo no especificado</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A04 - Otras infecciones intestinales bacterianas -->
+        <record id="icd10_A04" model="medical.icd10">
+            <field name="code">A04</field>
+            <field name="description">Otras infecciones intestinales bacterianas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_0" model="medical.icd10">
+            <field name="code">A04.0</field>
+            <field name="description">Infección debida a Escherichia coli enteropatógena</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_1" model="medical.icd10">
+            <field name="code">A04.1</field>
+            <field name="description">Infección debida a Escherichia coli enterotoxígena</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_2" model="medical.icd10">
+            <field name="code">A04.2</field>
+            <field name="description">Infección debida a Escherichia coli enteroinvasiva</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_3" model="medical.icd10">
+            <field name="code">A04.3</field>
+            <field name="description">Infección debida a Escherichia coli enterohemorrágica</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_4" model="medical.icd10">
+            <field name="code">A04.4</field>
+            <field name="description">Otras infecciones intestinales debidas a Escherichia coli</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_5" model="medical.icd10">
+            <field name="code">A04.5</field>
+            <field name="description">Enteritis debida a Campylobacter</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_6" model="medical.icd10">
+            <field name="code">A04.6</field>
+            <field name="description">Enteritis debida a Yersinia enterocolítica</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_7" model="medical.icd10">
+            <field name="code">A04.7</field>
+            <field name="description">Enterocolitis debida a Clostridium difficile</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_71" model="medical.icd10">
+            <field name="code">A04.71</field>
+            <field name="description">Enterocolitis debida a Clostridium difficile, recurrente</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_72" model="medical.icd10">
+            <field name="code">A04.72</field>
+            <field name="description">Enterocolitis debida a Clostridium difficile, no especificada como recurrente</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_8" model="medical.icd10">
+            <field name="code">A04.8</field>
+            <field name="description">Otras infecciones intestinales bacterianas especificadas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A04_9" model="medical.icd10">
+            <field name="code">A04.9</field>
+            <field name="description">Infección intestinal bacteriana, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A05 - Otras intoxicaciones alimentarias bacterianas -->
+        <record id="icd10_A05" model="medical.icd10">
+            <field name="code">A05</field>
+            <field name="description">Otras intoxicaciones alimentarias bacterianas, no clasificadas bajo otro concepto</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_0" model="medical.icd10">
+            <field name="code">A05.0</field>
+            <field name="description">Intoxicación alimentaria estafilocócica</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_1" model="medical.icd10">
+            <field name="code">A05.1</field>
+            <field name="description">Intoxicación alimentaria debida a botulismo</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_2" model="medical.icd10">
+            <field name="code">A05.2</field>
+            <field name="description">Intoxicación alimentaria debida a Clostridium perfringens [Clostridium welchii]</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_3" model="medical.icd10">
+            <field name="code">A05.3</field>
+            <field name="description">Intoxicación alimentaria debida a Vibrio parahaemolyticus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_4" model="medical.icd10">
+            <field name="code">A05.4</field>
+            <field name="description">Intoxicación alimentaria debida a Bacillus cereus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_5" model="medical.icd10">
+            <field name="code">A05.5</field>
+            <field name="description">Intoxicación alimentaria debida a Vibrio vulnificus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_8" model="medical.icd10">
+            <field name="code">A05.8</field>
+            <field name="description">Otras intoxicaciones alimentarias debidas a bacterias especificadas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A05_9" model="medical.icd10">
+            <field name="code">A05.9</field>
+            <field name="description">Intoxicación alimentaria bacteriana, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A06 - Amebiasis -->
+        <record id="icd10_A06" model="medical.icd10">
+            <field name="code">A06</field>
+            <field name="description">Amebiasis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_0" model="medical.icd10">
+            <field name="code">A06.0</field>
+            <field name="description">Disentería amebiana aguda</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_1" model="medical.icd10">
+            <field name="code">A06.1</field>
+            <field name="description">Amebiasis intestinal crónica</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_2" model="medical.icd10">
+            <field name="code">A06.2</field>
+            <field name="description">Colitis amebiana no disentérica</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_3" model="medical.icd10">
+            <field name="code">A06.3</field>
+            <field name="description">Ameboma intestinal</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_4" model="medical.icd10">
+            <field name="code">A06.4</field>
+            <field name="description">Absceso amebiano del hígado</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_5" model="medical.icd10">
+            <field name="code">A06.5</field>
+            <field name="description">Absceso amebiano del pulmón</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_6" model="medical.icd10">
+            <field name="code">A06.6</field>
+            <field name="description">Absceso amebiano del cerebro</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_7" model="medical.icd10">
+            <field name="code">A06.7</field>
+            <field name="description">Amebiasis cutánea</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_8" model="medical.icd10">
+            <field name="code">A06.8</field>
+            <field name="description">Infección amebiana de otras localizaciones</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_81" model="medical.icd10">
+            <field name="code">A06.81</field>
+            <field name="description">Cistitis amebiana</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_82" model="medical.icd10">
+            <field name="code">A06.82</field>
+            <field name="description">Otras infecciones genitourinarias amebianas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_89" model="medical.icd10">
+            <field name="code">A06.89</field>
+            <field name="description">Otras infecciones amebianas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A06_9" model="medical.icd10">
+            <field name="code">A06.9</field>
+            <field name="description">Amebiasis, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A07 - Otras enfermedades intestinales debidas a protozoos -->
+        <record id="icd10_A07" model="medical.icd10">
+            <field name="code">A07</field>
+            <field name="description">Otras enfermedades intestinales debidas a protozoos</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_0" model="medical.icd10">
+            <field name="code">A07.0</field>
+            <field name="description">Balantidiasis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_1" model="medical.icd10">
+            <field name="code">A07.1</field>
+            <field name="description">Giardiasis [lambliasis]</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_2" model="medical.icd10">
+            <field name="code">A07.2</field>
+            <field name="description">Criptosporidiosis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_3" model="medical.icd10">
+            <field name="code">A07.3</field>
+            <field name="description">Isosporiasis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_4" model="medical.icd10">
+            <field name="code">A07.4</field>
+            <field name="description">Ciclosporosis</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_8" model="medical.icd10">
+            <field name="code">A07.8</field>
+            <field name="description">Otras enfermedades intestinales especificadas debidas a protozoos</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A07_9" model="medical.icd10">
+            <field name="code">A07.9</field>
+            <field name="description">Enfermedad intestinal debida a protozoos, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A08 - Infecciones intestinales debidas a virus -->
+        <record id="icd10_A08" model="medical.icd10">
+            <field name="code">A08</field>
+            <field name="description">Infecciones intestinales debidas a virus y otros organismos especificados</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_0" model="medical.icd10">
+            <field name="code">A08.0</field>
+            <field name="description">Enteritis debida a rotavirus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_1" model="medical.icd10">
+            <field name="code">A08.1</field>
+            <field name="description">Gastroenteropatía aguda debida al agente de Norwalk y a otros virus redondos pequeños</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_11" model="medical.icd10">
+            <field name="code">A08.11</field>
+            <field name="description">Gastroenteropatía aguda debida al agente de Norwalk</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_19" model="medical.icd10">
+            <field name="code">A08.19</field>
+            <field name="description">Gastroenteropatía aguda por otros virus pequeños redondos</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_2" model="medical.icd10">
+            <field name="code">A08.2</field>
+            <field name="description">Enteritis debida a adenovirus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_3" model="medical.icd10">
+            <field name="code">A08.3</field>
+            <field name="description">Otras enteritis virales</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_31" model="medical.icd10">
+            <field name="code">A08.31</field>
+            <field name="description">Enteritis por calicivirus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_32" model="medical.icd10">
+            <field name="code">A08.32</field>
+            <field name="description">Enteritis por astrovirus</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_39" model="medical.icd10">
+            <field name="code">A08.39</field>
+            <field name="description">Otras enteritis virales</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_4" model="medical.icd10">
+            <field name="code">A08.4</field>
+            <field name="description">Infección intestinal viral, no especificada</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <record id="icd10_A08_8" model="medical.icd10">
+            <field name="code">A08.8</field>
+            <field name="description">Otras infecciones intestinales especificadas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+        <!-- A09 - Gastroenteritis y colitis infecciosas -->
+        <record id="icd10_A09" model="medical.icd10">
+            <field name="code">A09</field>
+            <field name="description">Gastroenteritis y colitis infecciosas, no especificadas</field>
+            <field name="group_id" ref="icd10_group_A0"/>
+        </record>
+
+    </data>
+</odoo>

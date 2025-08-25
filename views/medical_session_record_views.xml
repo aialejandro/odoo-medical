@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Session Record Views -->
+    <record id="view_medical_session_record_tree" model="ir.ui.view">
+        <field name="name">medical.session.record.tree</field>
+        <field name="model">medical.session.record</field>
+        <field name="arch" type="xml">
+            <list decoration-info="state == 'draft'" 
+                  decoration-warning="state == 'in_progress'"
+                  decoration-success="state == 'completed'"
+                  decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="session_id"/>
+                <field name="entry_datetime"/>
+                <field name="exit_datetime"/>
+                <field name="duration_minutes"/>
+                <field name="therapist_id"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_session_record_form" model="ir.ui.view">
+        <field name="name">medical.session.record.form</field>
+        <field name="model">medical.session.record</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="therapy_id"/>
+                            <field name="patient_id" readonly="1"/>
+                            <field name="session_id"/>
+                            <field name="therapist_id"/>
+                        </group>
+                        <group>
+                            <field name="entry_datetime"/>
+                            <field name="exit_datetime"/>
+                            <field name="duration_minutes"/>
+                            <field name="session_sequence"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Evolution" name="evolution">
+                            <field name="evolution" placeholder="Document patient evolution during this session..."/>
+                        </page>
+                        <page string="Observations" name="observations">
+                            <field name="observations" placeholder="Add therapist observations..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter reload_on_attachment="True"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_medical_session_record_calendar" model="ir.ui.view">
+        <field name="name">medical.session.record.calendar</field>
+        <field name="model">medical.session.record</field>
+        <field name="arch" type="xml">
+            <calendar string="Session Records" 
+                      date_start="entry_datetime" 
+                      date_stop="exit_datetime"
+                      color="therapist_id">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="therapist_id"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_medical_session_record_search" model="ir.ui.view">
+        <field name="name">medical.session.record.search</field>
+        <field name="model">medical.session.record</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="therapist_id"/>
+                <field name="session_id"/>
+                <separator/>
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="in_progress" string="In Progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter name="completed" string="Completed" domain="[('state', '=', 'completed')]"/>
+                <separator/>
+                <filter name="today" string="Today" 
+                        domain="[('entry_datetime', '&gt;=', datetime.datetime.combine(context_today(), datetime.time(0,0,0))),
+                                 ('entry_datetime', '&lt;', datetime.datetime.combine(context_today() + datetime.timedelta(days=1), datetime.time(0,0,0)))]"/>
+                <filter name="this_week" string="This Week" 
+                        domain="[('entry_datetime', '&gt;=', (context_today() - datetime.timedelta(days=context_today().weekday())).strftime('%Y-%m-%d')),
+                                 ('entry_datetime', '&lt;', (context_today() + datetime.timedelta(days=7-context_today().weekday())).strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_patient" string="Patient" context="{'group_by': 'patient_id'}"/>
+                    <filter name="group_therapist" string="Therapist" context="{'group_by': 'therapist_id'}"/>
+                    <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_date" string="Date" context="{'group_by': 'entry_datetime:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_medical_session_record" model="ir.actions.act_window">
+        <field name="name">Session Records</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.session.record</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="search_view_id" ref="view_medical_session_record_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new session record
+            </p>
+            <p>
+                Track individual therapy session records with entry/exit times, evolution, and observations.
+            </p>
+        </field>
+    </record>
+</odoo>

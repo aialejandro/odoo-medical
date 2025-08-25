@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- X-ray Area Form View -->
+    <record id="view_medical_xray_area_form" model="ir.ui.view">
+        <field name="name">medical.xray.area.form</field>
+        <field name="model">medical.xray.area</field>
+        <field name="arch" type="xml">
+            <form string="X-ray Area">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- X-ray Area Tree View -->
+    <record id="view_medical_xray_area_tree" model="ir.ui.view">
+        <field name="name">medical.xray.area.tree</field>
+        <field name="model">medical.xray.area</field>
+        <field name="arch" type="xml">
+            <list string="X-ray Areas">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- X-ray Area Search View -->
+    <record id="view_medical_xray_area_search" model="ir.ui.view">
+        <field name="name">medical.xray.area.search</field>
+        <field name="model">medical.xray.area</field>
+        <field name="arch" type="xml">
+            <search string="X-ray Areas">
+                <field name="name"/>
+                <field name="description"/>
+                <filter name="active" string="Active" domain="[('active', '=', True)]"/>
+                <filter name="inactive" string="Archived" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- X-ray Area Action -->
+    <record id="action_medical_xray_area" model="ir.actions.act_window">
+        <field name="name">X-ray Areas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.xray.area</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_medical_xray_area_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first X-ray area!
+            </p>
+            <p>
+                X-ray areas define the body parts that can be X-rayed,
+                such as chest, spine, abdomen, etc.
+            </p>
+        </field>
+    </record>
+</odoo>

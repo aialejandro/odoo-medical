@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Treatment Session Views -->
+    <record id="view_medical_treatment_session_tree" model="ir.ui.view">
+        <field name="name">medical.treatment.session.tree</field>
+        <field name="model">medical.treatment.session</field>
+        <field name="arch" type="xml">
+            <list default_order="sequence">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="component_count"/>
+                <field name="estimated_duration"/>
+                <field name="active"/>
+                <field name="treatment_id" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_treatment_session_form" model="ir.ui.view">
+        <field name="name">medical.treatment.session.form</field>
+        <field name="model">medical.treatment.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_components" 
+                                type="object" 
+                                class="oe_stat_button" 
+                                icon="fa-puzzle-piece"
+                                invisible="component_count == 0">
+                            <field name="component_count" widget="statinfo" string="Components"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Session name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="treatment_id"/>
+                            <field name="sequence"/>
+                            <field name="estimated_duration"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="Add session description..."/>
+                        </page>
+                        <page string="Components" name="components">
+                            <field name="treatment_component_ids">
+                                <list default_order="sequence">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="duration_minutes"/>
+                                    <field name="description"/>
+                                    <field name="active"/>
+                                </list>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="sequence"/>
+                                            <field name="duration_minutes"/>
+                                        </group>
+                                        <group>
+                                            <field name="active"/>
+                                        </group>
+                                    </group>
+                                    <notebook>
+                                        <page string="Description" name="description">
+                                            <field name="description"/>
+                                        </page>
+                                        <page string="Instructions" name="instructions">
+                                            <field name="instructions"/>
+                                        </page>
+                                    </notebook>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_medical_treatment_session" model="ir.actions.act_window">
+        <field name="name">Treatment Sessions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.treatment.session</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new treatment session
+            </p>
+            <p>
+                Define sessions that compose medical treatments.
+            </p>
+        </field>
+    </record>
+</odoo>

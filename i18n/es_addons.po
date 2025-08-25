@@ -1,0 +1,61 @@
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_product_id
+msgid "Default Consultation Item"
+msgstr "Item de consulta por defecto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_tax_id
+msgid "Default Consultation Tax"
+msgstr "Impuesto por defecto para consultas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_journal_id
+msgid "Default Consultation Journal"
+msgstr "Diario por defecto para consultas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_product_id
+msgid "Default Consultation Item"
+msgstr "Item de consulta por defecto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_tax_id
+msgid "Default Consultation Tax"
+msgstr "Impuesto por defecto para consultas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_journal_id
+msgid "Default Consultation Journal"
+msgstr "Diario por defecto para consultas"
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_consultation.py:action_create_invoice
+#, python-format
+msgid "You must configure the consultation item and journal."
+msgstr "Debe configurar el item y diario de consulta."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_consultation.py:action_create_invoice
+#, python-format
+msgid "Consultation Invoice"
+msgstr "Factura de Consulta"
+
+#. module: odoo_medical
+#: xml:odoo_medical.view_medical_consultation_form:0
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: odoo_medical
+#: xml:odoo_medical.res_config_settings_view_form_medical:0
+msgid "Medical Consultation Settings"
+msgstr "Ajustes de Consultas Médicas"
+
+#. module: odoo_medical
+#: xml:odoo_medical.res_config_settings_view_form_medical:0
+msgid "Medical Consultations"
+msgstr "Consultas Médicas"
+
+#. module: odoo_medical
+#: xml:odoo_medical.res_config_settings_view_form_medical:0
+msgid "Default Medical Consultation Parameters"
+msgstr "Parámetros por defecto de consulta médica"

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- IESS Medical Certificate Template -->
+    <template id="report_iess_medical_certificate">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="consultation">
+                <div class="page" style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.4;">
+                    <div class="oe_structure"/>
+                    
+                    <!-- IESS Header -->
+                    <div style="text-align: center; border-bottom: 2px solid #0056b3; margin-bottom: 20px; padding-bottom: 15px;">
+                        <h2 style="color: #0056b3; margin: 0; font-size: 18pt;">INSTITUTO ECUATORIANO DE SEGURIDAD SOCIAL</h2>
+                        <h3 style="color: #0056b3; margin: 5px 0 0 0; font-size: 14pt;">CERTIFICADO MÉDICO</h3>
+                    </div>
+
+                    <!-- Certificate Number and Date -->
+                    <div style="margin-bottom: 20px; text-align: right;">
+                        <p><strong>No. Certificado:</strong> <span t-field="consultation.name"/></p>
+                        <p><strong>Fecha:</strong> <span t-field="consultation.consultation_date" t-options="{'widget': 'date'}"/></p>
+                    </div>
+
+                    <!-- Patient Information Section -->
+                    <div style="margin-bottom: 25px; border: 1px solid #0056b3; padding: 15px; background-color: #f8f9fc;">
+                        <h4 style="color: #0056b3; margin-top: 0;">DATOS DEL AFILIADO</h4>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="width: 50%; padding: 5px 10px 5px 0;">
+                                    <strong>Apellidos y Nombres:</strong><br/>
+                                    <span t-if="consultation.patient_id" t-esc="consultation.patient_id.name" style="font-size: 12pt;"/>
+                                    <span t-if="not consultation.patient_id" style="font-size: 12pt;">No especificado</span>
+                                </td>
+                                <td style="width: 50%; padding: 5px 0 5px 10px;">
+                                    <strong>Cédula de Identidad:</strong><br/>
+                                    <span t-field="consultation.patient_vat" style="font-size: 12pt;"/>
+                                </td>
+                            </tr>
+                            <tr t-if="consultation.age or consultation.birth_date">
+                                <td style="padding: 5px 10px 5px 0;">
+                                    <strong>Edad:</strong>
+                                    <span t-if="consultation.age"><span t-field="consultation.age"/> años</span>
+                                </td>
+                                <td style="padding: 5px 0 5px 10px;">
+                                    <strong>Fecha de Nacimiento:</strong>
+                                    <span t-if="consultation.birth_date" t-field="consultation.birth_date" t-options="{'widget': 'date'}"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Medical Information Section -->
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #0056b3;">INFORMACIÓN MÉDICA</h4>
+                        
+                        <!-- Diagnosis -->
+                        <div style="margin-bottom: 15px;">
+                            <p><strong>DIAGNÓSTICO:</strong></p>
+                            <div style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; min-height: 40px;">
+                                <span t-field="consultation.diagnosis"/>
+                            </div>
+                        </div>
+
+                        <!-- ICD-10 Code -->
+                        <div style="margin-bottom: 15px;" t-if="consultation.cie10_code">
+                            <p><strong>CÓDIGO CIE-10:</strong> 
+                                <t t-if="consultation.cie10_code.code"><span t-esc="consultation.cie10_code.code"/></t>
+                                <t t-if="consultation.cie10_code.name"> - <span t-esc="consultation.cie10_code.name"/></t>
+                            </p>
+                        </div>
+
+                        <!-- Medical Cause -->
+                        <div style="margin-bottom: 15px;" t-if="consultation.medical_cause">
+                            <p><strong>CAUSA DE LA INCAPACIDAD:</strong></p>
+                            <div style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9;">
+                                <t t-if="consultation.medical_cause == 'general_illness'">☐ ENFERMEDAD GENERAL ☑</t>
+                                <t t-if="consultation.medical_cause == 'work_accident'">☐ ACCIDENTE DE TRABAJO ☑</t>
+                                <t t-if="consultation.medical_cause == 'traffic_accident'">☐ ACCIDENTE DE TRÁNSITO ☑</t>
+                                <t t-if="consultation.medical_cause == 'maternity'">☐ MATERNIDAD ☑</t>
+                                <t t-if="consultation.medical_cause == 'catastrophic_illness'">☐ ENFERMEDAD CATASTRÓFICA ☑</t>
+                            </div>
+                        </div>
+
+                        <!-- Symptoms -->
+                        <div style="margin-bottom: 15px;">
+                            <p><strong>PRESENTA SÍNTOMAS:</strong></p>
+                            <div style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9;">
+                                <span t-if="consultation.has_symptoms">☑ SÍ    ☐ NO</span>
+                                <span t-if="not consultation.has_symptoms">☐ SÍ    ☑ NO</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Incapacity Section -->
+                    <div style="margin-bottom: 25px; border: 1px solid #dc3545; padding: 15px; background-color: #fff5f5;">
+                        <h4 style="color: #dc3545; margin-top: 0;">PRESCRIPCIÓN DE INCAPACIDAD</h4>
+                        
+                        <!-- Work Restriction Type -->
+                        <div style="margin-bottom: 15px;" t-if="consultation.work_restriction_type and consultation.work_restriction_type != 'none'">
+                            <p><strong>TIPO DE RESTRICCIÓN:</strong></p>
+                            <div style="background-color: white; padding: 10px; border: 1px solid #ccc;">
+                                <p t-if="consultation.work_restriction_type == 'isolation'">☑ AISLAMIENTO</p>
+                                <p t-if="consultation.work_restriction_type == 'absolute_rest'">☑ REPOSO ABSOLUTO</p>
+                                <p t-if="consultation.work_restriction_type == 'telework'">☑ TELETRABAJO</p>
+                            </div>
+                        </div>
+
+                        <!-- Rest Period -->
+                        <div t-if="consultation.rest_days and consultation.rest_days > 0">
+                            <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                                <tr>
+                                    <td style="width: 33%; text-align: center; border: 1px solid #000; padding: 8px; background-color: white;">
+                                        <strong>DÍAS DE INCAPACIDAD</strong><br/>
+                                        <span t-field="consultation.rest_days" style="font-size: 16pt; font-weight: bold;"/>
+                                    </td>
+                                    <td style="width: 33%; text-align: center; border: 1px solid #000; padding: 8px; background-color: white;">
+                                        <strong>DESDE</strong><br/>
+                                        <span t-field="consultation.rest_start_date" t-options="{'widget': 'date'}" style="font-size: 12pt;"/>
+                                    </td>
+                                    <td style="width: 34%; text-align: center; border: 1px solid #000; padding: 8px; background-color: white;">
+                                        <strong>HASTA</strong><br/>
+                                        <span t-field="consultation.rest_end_date" t-options="{'widget': 'date'}" style="font-size: 12pt;"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Treatment and Observations -->
+                    <div style="margin-bottom: 25px;" t-if="consultation.treatment_description or consultation.observations">
+                        <h4 style="color: #0056b3;">TRATAMIENTO Y OBSERVACIONES</h4>
+                        <div style="border: 1px solid #ccc; padding: 15px; background-color: #f9f9f9; min-height: 60px;">
+                            <p t-if="consultation.treatment_description">
+                                <strong>Tratamiento:</strong> <span t-field="consultation.treatment_description"/>
+                            </p>
+                            <p t-if="consultation.observations">
+                                <strong>Observaciones:</strong> <span t-field="consultation.observations"/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Prescription Table -->
+                    <div t-if="consultation.prescription_line_ids" style="margin-bottom: 25px;">
+                        <h4 style="color: #0056b3;">PRESCRIPCIÓN FARMACOLÓGICA</h4>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 10pt;">
+                            <thead>
+                                <tr style="background-color: #0056b3; color: white;">
+                                    <th style="border: 1px solid #0056b3; padding: 6px; text-align: left;">MEDICAMENTO</th>
+                                    <th style="border: 1px solid #0056b3; padding: 6px; text-align: center;">FORMA</th>
+                                    <th style="border: 1px solid #0056b3; padding: 6px; text-align: center;">CONCENTRACIÓN</th>
+                                    <th style="border: 1px solid #0056b3; padding: 6px; text-align: center;">CANTIDAD</th>
+                                    <th style="border: 1px solid #0056b3; padding: 6px; text-align: left;">POSOLOGÍA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="consultation.prescription_line_ids" t-as="prescription">
+                                    <tr>
+                                        <td style="border: 1px solid #ccc; padding: 6px;"><span t-field="prescription.medication_name"/></td>
+                                        <td style="border: 1px solid #ccc; padding: 6px; text-align: center;"><span t-field="prescription.pharmaceutical_form"/></td>
+                                        <td style="border: 1px solid #ccc; padding: 6px; text-align: center;"><span t-field="prescription.concentration"/> <span t-field="prescription.concentration_unit"/></td>
+                                        <td style="border: 1px solid #ccc; padding: 6px; text-align: center;"><span t-field="prescription.quantity_to_dispense"/></td>
+                                        <td style="border: 1px solid #ccc; padding: 6px;"><span t-field="prescription.posology"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Doctor Information and Signature -->
+                    <div style="margin-top: 50px;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="width: 50%; vertical-align: top; padding-right: 20px;">
+                                    <h4 style="color: #0056b3;">DATOS DEL MÉDICO TRATANTE</h4>
+                                    <div style="border: 1px solid #ccc; padding: 10px; background-color: #f9f9f9; min-height: 80px;">
+                                        <p><strong>Nombre:</strong> 
+                                            <span t-if="consultation.doctor_id" t-esc="consultation.doctor_id.name"/>
+                                            <span t-if="not consultation.doctor_id">No asignado</span>
+                                        </p>
+                                        <p t-if="consultation.doctor_license"><strong>No. Licencia:</strong> <span t-field="consultation.doctor_license"/></p>
+                                        <p><strong>Fecha:</strong> <span t-field="consultation.consultation_date" t-options="{'widget': 'date'}"/></p>
+                                    </div>
+                                </td>
+                                <td style="width: 50%; vertical-align: top; text-align: center; padding-left: 20px;">
+                                    <div style="margin-top: 40px;">
+                                        <div style="border-top: 1px solid #000; width: 250px; margin: 0 auto 10px auto;"></div>
+                                        <p style="font-weight: bold;">
+                                            FIRMA Y SELLO DEL MÉDICO<br/>
+                                            <span t-if="consultation.doctor_id" t-esc="consultation.doctor_id.name"/>
+                                            <span t-if="not consultation.doctor_id">No asignado</span>
+                                        </p>
+                                        <p t-if="consultation.doctor_license" style="font-size: 10pt;">
+                                            Reg. Prof. No. <span t-field="consultation.doctor_license"/>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Footer -->
+                    <div style="margin-top: 30px; text-align: center; font-size: 9pt; color: #666;">
+                        <p>Este certificado ha sido emitido de conformidad con las normas del IESS.</p>
+                        <p>Para verificar la autenticidad de este documento, consulte con la institución emisora.</p>
+                    </div>
+
+                    <div class="oe_structure"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

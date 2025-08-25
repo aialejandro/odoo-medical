@@ -1,0 +1,2925 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_medical
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-24 18:04+0000\n"
+"PO-Revision-Date: 2025-08-24 18:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
+msgid "<i class=\"fa fa-clock-o\"/> Next:"
+msgstr "<i class=\"fa fa-clock-o\"/> Próxima:"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
+msgid "<i class=\"fa fa-money\"/> $"
+msgstr "<i class=\"fa fa-money\"/> $"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_partner_form_inherit_medical_history
+msgid "<span class=\"o_stat_text\">History</span>"
+msgstr "<span class=\"o_stat_text\">Historial</span>"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "<span class=\"o_stat_text\">Sessions</span>"
+msgstr "<span class=\"o_stat_text\">Sesiones</span>"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_6
+msgid "Absceso amebiano del cerebro"
+msgstr "Absceso amebiano del cerebro"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_4
+msgid "Absceso amebiano del hígado"
+msgstr "Absceso amebiano del hígado"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_5
+msgid "Absceso amebiano del pulmón"
+msgstr "Absceso amebiano del pulmón"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__absolute_rest
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Absolute Rest"
+msgstr "Reposo Absoluto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_needaction
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_needaction
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_needaction
+msgid "Action Needed"
+msgstr "Acción Requerida"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__active
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__active
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__active
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__active
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__state__active
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Active"
+msgstr "Activo"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_exception_decoration
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_exception_decoration
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Excepción de Actividad"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_state
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_state
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_state
+msgid "Activity State"
+msgstr "Estado de Actividad"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_type_icon
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_type_icon
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de Tipo de Actividad"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__duration_minutes
+msgid "Actual Duration (Minutes)"
+msgstr "Duración Real (Minutos)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__duration_minutes
+msgid "Actual duration of the session in minutes"
+msgstr "Duración real de la sesión en minutos"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
+msgid "Add a description..."
+msgstr "Agregar una descripción..."
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_component_form
+msgid "Add component description..."
+msgstr "Agregar descripción del componente..."
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_component_form
+msgid "Add detailed instructions..."
+msgstr "Agregar instrucciones detalladas..."
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_session_form
+msgid "Add session description..."
+msgstr "Agregar descripción de la sesión..."
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_form
+msgid "Add therapist observations..."
+msgstr "Agregar observaciones del terapeuta..."
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Add treatment description..."
+msgstr "Agregar descripción del tratamiento..."
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__description
+msgid "Additional description for the apparatus"
+msgstr "Descripción adicional para el aparato"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__observations
+msgid "Additional observations from the therapist"
+msgstr "Observaciones adicionales del terapeuta"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Additional observations..."
+msgstr "Observaciones adicionales..."
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_affected_apparatus
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__affected_apparatus_id
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_affected_apparatus
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Affected Apparatus"
+msgstr "Aparato Afecto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__age
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__age
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__age
+msgid "Age"
+msgstr "Edad"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__allergy
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Allergy"
+msgstr "Alergia"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06
+msgid "Amebiasis"
+msgstr "Amebiasis"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_7
+msgid "Amebiasis cutánea"
+msgstr "Amebiasis cutánea"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_1
+msgid "Amebiasis intestinal crónica"
+msgstr "Amebiasis intestinal crónica"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_9
+msgid "Amebiasis, no especificada"
+msgstr "Amebiasis, no especificada"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_3
+msgid "Ameboma intestinal"
+msgstr "Ameboma intestinal"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_history
+#: model:ir.ui.menu,name:odoo_medical.menu_action_medical_history
+msgid "Antecedentes"
+msgstr "Antecedentes del Paciente"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__name
+msgid "Apparatus Name"
+msgstr "Nombre del Aparato"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
+msgid "Apparatus name..."
+msgstr "Nombre del aparato..."
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__affected_apparatus_id
+msgid "Apparatus that is being treated"
+msgstr "Aparato que está siendo tratado"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_component_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_session_form
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_23
+msgid "Artritis por Salmonella"
+msgstr "Artritis por Salmonella"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_04
+msgid "Artritis tifoidea"
+msgstr "Artritis tifoidea"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_icd10__group_id
+msgid "Assign this code to a specific ICD-10 group"
+msgstr "Asignar este código a un grupo ICD-10 específico"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_attachment_count
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_attachment_count
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_attachment_count
+msgid "Attachment Count"
+msgstr "Contador de Archivos Adjuntos"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__attending_physician_id
+msgid "Attending Physician"
+msgstr "Médico Tratante"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_0
+msgid "Balantidiasis"
+msgstr "Balantidiasis"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__birth_date
+msgid "Birth Date"
+msgstr "Fecha de Nacimiento"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "By Category"
+msgstr "Por Categoría"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "By Patient"
+msgstr "Por Paciente"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "By State"
+msgstr "Por Estado"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A
+msgid "CIERTAS ENFERMEDADES INFECCIOSAS Y PARASITARIAS"
+msgstr "CIERTAS ENFERMEDADES INFECCIOSAS Y PARASITARIAS"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A2
+msgid "CIERTAS ZOONOSIS BACTERIANAS"
+msgstr "CIERTAS ZOONOSIS BACTERIANAS"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_session_record__state__cancelled
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_therapy__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__capsule
+msgid "Capsule"
+msgstr "Cápsula"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__catastrophic_illness
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Catastrophic Illness"
+msgstr "Enfermedad Catastrófica"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__category
+msgid "Category"
+msgstr "Categoría"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__medical_cause
+msgid "Cause of the medical condition"
+msgstr "Causa de la condición médica"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__chapter
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_search
+msgid "Chapter"
+msgstr "Capítulo"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_form
+msgid "Chapter (Legacy)"
+msgstr "Capítulo (Heredado)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_partner__is_patient
+#: model:ir.model.fields,help:odoo_medical.field_res_users__is_patient
+msgid "Check this box if this contact is a medical patient"
+msgstr "Marque esta casilla si este contacto es un paciente médico"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__child_ids
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
+msgid "Child Groups"
+msgstr "Grupos Hijo"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__state__chronic
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Chronic"
+msgstr "Crónico"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_4
+msgid "Ciclosporosis"
+msgstr "Ciclosporosis"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_81
+msgid "Cistitis amebiana"
+msgstr "Cistitis amebiana"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__code
+msgid "Code"
+msgstr "Codigo"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_2
+msgid "Colitis amebiana no disentérica"
+msgstr "Colitis amebiana no disentérica"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Complete"
+msgstr "Completar"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_session_record__state__completed
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_therapy__state__completed
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Completed"
+msgstr "Completado"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__completed_sessions
+msgid "Completed Sessions"
+msgstr "Sesiones Completadas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__name
+msgid "Component Name"
+msgstr "Nombre del Componente"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_component_form
+msgid "Component name..."
+msgstr "Nombre del componente..."
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_session_form
+msgid "Components"
+msgstr "Componentes"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__component_count
+msgid "Components Count"
+msgstr "Conteo de Componentes"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__treatment_component_ids
+msgid "Components that make up this session"
+msgstr "Componentes que componen esta sesión"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__name
+msgid "Computed name for the session record"
+msgstr "Nombre calculado para el registro de sesión"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__concentration
+msgid "Concentration"
+msgstr "Concentración"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__concentration_unit
+msgid "Concentration Unit"
+msgstr "Unidad de la Concentración"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Concentration must be greater than zero."
+msgstr "La concentración debe ser mayor que cero."
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_configuration
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_therapy_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Configure default parameters for medical consultations"
+msgstr "Configurar parámetros predeterminados para consultas médicas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__consultation_id
+msgid "Consultation"
+msgstr "Consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__consultation_count
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__consultation_count
+msgid "Consultation Count"
+msgstr "Conteo de Consultas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_date
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Consultation Date"
+msgstr "Fecha de Consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__duration_minutes
+msgid "Consultation Duration (min)"
+msgstr "Duración de Consulta (min)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_fee
+msgid "Consultation Fee"
+msgstr "Valor de Consulta"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Consultation Invoice"
+msgstr "Factura de Consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_reason
+msgid "Consultation Reason"
+msgstr "Motivo de la Consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__name
+msgid "Consultation Reference"
+msgstr "Referencia de Consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__state
+msgid "Consultation Status"
+msgstr "Estado de Consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_type
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Consultation Type"
+msgstr "Tipo de Consulta"
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_consultations_root
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_partner_form_inherit_medical_history
+msgid "Consultations"
+msgstr "Consultas"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__contraindications
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Contraindications"
+msgstr "Contraindicaciones"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__cream
+msgid "Cream"
+msgstr "Crema"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_affected_apparatus
+msgid "Create a new affected apparatus"
+msgstr "Crear un nuevo aparato afectado"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_therapy
+msgid "Create a new medical therapy"
+msgstr "Crear una nueva terapia médica"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment
+msgid "Create a new medical treatment"
+msgstr "Crear un nuevo tratamiento médico"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_session_record
+msgid "Create a new session record"
+msgstr "Crear un nuevo registro de sesión"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment_component
+msgid "Create a new treatment component"
+msgstr "Crear un nuevo componente de tratamiento"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment_session
+msgid "Create a new treatment session"
+msgstr "Crear una nueva sesión de tratamiento"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_icd10
+msgid "Create your first ICD-10 code!"
+msgstr "¡Cree su primer código ICD-10!"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_icd10_group
+msgid "Create your first ICD-10 group!"
+msgstr "¡Cree su primer grupo ICD-10!"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_consultation
+msgid "Create your first medical consultation!"
+msgstr "¡Cree su primera consulta médica!"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__create_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__create_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_2
+msgid "Criptosporidiosis"
+msgstr "Criptosporidiosis"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__state
+msgid "Current state of the therapy"
+msgstr "Estado actual de la terapia"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A00
+msgid "Cólera"
+msgstr "Cólera"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A00_1
+msgid "Cólera debido a Vibrio cholerae 01, biotipo El Tor"
+msgstr "Cólera debido a Vibrio cholerae 01, biotipo El Tor"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A00_0
+msgid "Cólera debido a Vibrio cholerae 01, biotipo cholerae"
+msgstr "Cólera debido a Vibrio cholerae 01, biotipo cholerae"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A00_9
+msgid "Cólera, no especificado"
+msgstr "Cólera, no especificado"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__exit_datetime
+msgid "Date and time when the session ended"
+msgstr "Fecha y hora cuando terminó la sesión"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__entry_datetime
+msgid "Date and time when the session started"
+msgstr "Fecha y hora cuando inició la sesión"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__therapy_date
+msgid "Date when the therapy is scheduled"
+msgstr "Fecha cuando está programada la terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__start_date
+msgid "Date when therapy sessions actually started"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__end_date
+msgid "Date when therapy sessions ended"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_product_id
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_product_id
+msgid "Default Consultation Item"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_journal_id
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_journal_id
+msgid "Default Consultation Journal"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_tax_id
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_tax_id
+msgid "Default Consultation Tax"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Default Medical Consultation Parameters"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment_component
+msgid "Define individual components that make up treatment sessions."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment_session
+msgid "Define sessions that compose medical treatments."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_affected_apparatus
+msgid ""
+"Define the apparatus that can be affected and require therapy treatment."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Define treatment objectives..."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment
+msgid ""
+"Define treatment protocols with sessions and components for therapy "
+"management."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
+msgid "Delete"
+msgstr "Eliminar"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Describe the patient's evolution..."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Describe the reason for this consultation..."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Describe the treatment..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__description
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__description
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__description
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__description
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__description
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__description
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_component_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_session_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__description
+msgid "Description of the session objectives and procedures"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__description
+msgid "Detailed description of the component"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__description
+msgid "Detailed description of the treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__diagnosis
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__diagnosis
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Diagnosis"
+msgstr "Diagnóstico de la Consulta"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Diagnosis & Notes"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__diastolic_pressure
+msgid "Diastolic Pressure (mmHg)"
+msgstr "Presión Diastólica (mmHg)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__icd10_count
+msgid "Direct ICD-10 Codes"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__discount_percentage
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Discount percentage must be between 0 and 100."
+msgstr "El porcentaje de descuento debe estar entre 0 y 100."
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_0
+msgid "Disentería amebiana aguda"
+msgstr "Disentería amebiana aguda"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__display_name
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_form
+msgid "Document patient evolution during this session..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_session_record__state__draft
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_therapy__state__draft
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
+msgid "Dropdown"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__drops
+msgid "Drops"
+msgstr "Gotas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__duration_minutes
+msgid "Duration (Minutes)"
+msgstr "Duración (Minutos)"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_B2
+msgid "ENFERMEDAD POR VIRUS DE INMUNODEFICIENCIA HUMANA [VIH]"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A0
+msgid "ENFERMEDADES INFECCIOSAS INTESTINALES"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
+msgid "Edit"
+msgstr "Editar"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__end_date
+msgid "End Date"
+msgstr "Fecha de Fin"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__end_datetime
+msgid "End Time"
+msgstr "Hora de Fin"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__rest_end_date
+msgid "End date of medical rest"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_9
+msgid "Enfermedad intestinal debida a protozoos, no especificada"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A2
+msgid "Enfermedades bacterianas transmitidas de animales a humanos (A20-A28)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A6
+msgid "Enfermedades causadas por espiroquetas (A65-A69)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A75
+msgid "Enfermedades causadas por rickettsia (A75-A79)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A
+msgid ""
+"Enfermedades generalmente reconocidas como transmisibles o contagiosas "
+"(A00-B99)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A0
+msgid ""
+"Enfermedades infecciosas que afectan principalmente el tracto "
+"gastrointestinal (A00-A09)"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Enter the diagnosis..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_5
+msgid "Enteritis debida a Campylobacter"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_0
+msgid "Enteritis debida a Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_6
+msgid "Enteritis debida a Yersinia enterocolítica"
+msgstr "Enteritis debida a Yersinia enterocolítica"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_2
+msgid "Enteritis debida a adenovirus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_0
+msgid "Enteritis debida a rotavirus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_32
+msgid "Enteritis por astrovirus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_31
+msgid "Enteritis por calicivirus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_7
+msgid "Enterocolitis debida a Clostridium difficile"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_72
+msgid ""
+"Enterocolitis debida a Clostridium difficile, no especificada como "
+"recurrente"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_71
+msgid "Enterocolitis debida a Clostridium difficile, recurrente"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__entry_datetime
+msgid "Entry Date and Time"
+msgstr "Fecha y Hora de Entrada"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__estimated_duration
+msgid "Estimated Duration (Minutes)"
+msgstr "Duración Estimada (Minutos)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__event_date
+msgid "Event Date"
+msgstr "Fecha del Evento"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__evolution
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__evolution
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_form
+msgid "Evolution"
+msgstr "Evolución"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__exit_datetime
+msgid "Exit Date and Time"
+msgstr "Fecha y Hora de Salida"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__duration_minutes
+msgid "Expected duration in minutes for this component"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A9
+msgid ""
+"FIEBRES VIRALES TRANSMITIDAS POR ARTRÓPODOS Y FIEBRES VIRALES HEMORRÁGICAS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_0
+msgid "Fiebre tifoidea"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_02
+msgid "Fiebre tifoidea con afectación cardiaca"
+msgstr "Fiebre tifoidea con afectación cardiaca"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_00
+msgid "Fiebre tifoidea, no especificada"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01
+msgid "Fiebres tifoidea y paratifoidea"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A9
+msgid "Fiebres virales transmitidas por vectores (A90-A99)"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Finish Consultation"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__state__finished
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Finished"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__first_time
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "First Time"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__follow_up
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Follow-up"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_follower_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_follower_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_partner_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_partner_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__activity_type_icon
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__activity_type_icon
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A09
+msgid "Gastroenteritis y colitis infecciosas, no especificadas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_11
+msgid "Gastroenteropatía aguda debida al agente de Norwalk"
+msgstr "Gastroenteropatía aguda debida al agente de Norwalk"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_1
+msgid ""
+"Gastroenteropatía aguda debida al agente de Norwalk y a otros virus redondos"
+" pequeños"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_19
+msgid "Gastroenteropatía aguda por otros virus pequeños redondos"
+msgstr "Gastroenteropatía aguda por otros virus pequeños redondos"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__general_illness
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "General Illness"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__notes
+msgid "General notes about the therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "General therapy notes..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_1
+msgid "Giardiasis [lambliasis]"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_search
+msgid "Group"
+msgstr "Grupo"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Group By"
+msgstr "Agrupar Por"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__code
+msgid "Group Code"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__name
+msgid "Group Name"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.constraint,message:odoo_medical.constraint_medical_icd10_group_code_unique
+msgid "Group code must be unique."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_form
+msgid "Group description..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__obstetric
+msgid "Gyneco-Obstetric"
+msgstr "Gineco-Obstétrico"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_B15
+msgid "HEPATITIS VIRAL"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__has_message
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__has_message
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__has_message
+msgid "Has Message"
+msgstr "Tiene Mensaje"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__has_symptoms
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Has Symptoms"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_B15
+msgid "Hepatitis causada por virus (B15-B19)"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_partner_form_inherit_medical_history
+msgid "History"
+msgstr "Historial"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__name
+msgid "History Title"
+msgstr "Título del Antecedente"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_history.py:0
+msgid "History created"
+msgstr ""
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_history.py:0
+msgid ""
+"History entries cannot be deleted. Set status to \"Inactive\" or "
+"\"Resolved\" instead."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_icd10
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__icd10_id
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_form
+msgid "ICD-10"
+msgstr "CIE-10"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_icd10
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__cie10_code
+msgid "ICD-10 Code"
+msgstr "Código ICD-10"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__icd10_ids
+#: model:ir.ui.menu,name:odoo_medical.menu_action_medical_icd10
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_form
+msgid "ICD-10 Codes"
+msgstr "CIE-10"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_icd10_group
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__group_id
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_form
+msgid "ICD-10 Group"
+msgstr "Grupo CIE-10"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_icd10_group
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_icd10_group
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_tree
+msgid "ICD-10 Groups"
+msgstr "Grupos CIE-10"
+
+#. module: odoo_medical
+#: model:ir.model.constraint,message:odoo_medical.constraint_medical_icd10_code_unique
+msgid "ICD-10 code must be unique."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_icd10
+msgid ""
+"ICD-10 codes are international medical classification codes.\n"
+"                You can organize them by groups for better management."
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_icd10_group
+msgid ""
+"ICD-10 groups help organize medical codes into logical categories.\n"
+"                You can create hierarchical groups with parent-child relationships."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__id
+msgid "ID"
+msgstr "ID"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A5
+msgid "INFECCIONES CON MODO DE TRANSMISIÓN PREDOMINANTEMENTE SEXUAL"
+msgstr "INFECCIONES CON MODO DE TRANSMISIÓN PREDOMINANTEMENTE SEXUAL"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_B0
+msgid ""
+"INFECCIONES VIRALES CARACTERIZADAS POR LESIONES DE PIEL Y DE LAS MEMBRANAS "
+"MUCOSAS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A8
+msgid "INFECCIONES VIRALES Y POR PRIONES DEL SISTEMA NERVIOSO CENTRAL"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__concentration_unit__iu
+msgid "IU"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_exception_icon
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_exception_icon
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__activity_exception_icon
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__activity_exception_icon
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_needaction
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__message_needaction
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_has_error
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_has_sms_error
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__message_has_error
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__message_has_sms_error
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_has_error
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__event_date
+msgid "If different from the record date (e.g., date of surgery/event)"
+msgstr "Si es diferente de la fecha de registro (ej: fecha de cirugía/evento)"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__state__in_progress
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_session_record__state__in_progress
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_therapy__state__in_progress
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "In Progress"
+msgstr "En Progreso"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__state__inactive
+msgid "Inactive"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__has_symptoms
+msgid "Indicates if the patient presents symptoms"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A1
+msgid "Infecciones causadas por Mycobacterium tuberculosis (A15-A19)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A5
+msgid "Infecciones de transmisión sexual (A50-A64)"
+msgstr "Infecciones de transmisión sexual (A50-A64)"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08
+msgid ""
+"Infecciones intestinales debidas a virus y otros organismos especificados"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_2
+msgid "Infecciones localizadas debidas a Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_20
+msgid "Infecciones localizadas debidas a Salmonella, no especificadas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A7
+msgid "Infecciones por Chlamydia (A70-A74)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_B0
+msgid "Infecciones virales de la piel y mucosas (B00-B09)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A8
+msgid "Infecciones virales del sistema nervioso central (A80-A89)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_8
+msgid "Infección amebiana de otras localizaciones"
+msgstr "Infección amebiana de otras localizaciones"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_3
+msgid "Infección debida a Escherichia coli enterohemorrágica"
+msgstr "Infección debida a Escherichia coli enterohemorrágica"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_2
+msgid "Infección debida a Escherichia coli enteroinvasiva"
+msgstr "Infección debida a Escherichia coli enteroinvasiva"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_0
+msgid "Infección debida a Escherichia coli enteropatógena"
+msgstr "Infección debida a Escherichia coli enteropatógena"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_1
+msgid "Infección debida a Escherichia coli enterotoxígena"
+msgstr "Infección debida a Escherichia coli enterotoxígena"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_9
+msgid "Infección debida a Salmonella, no especificada"
+msgstr "Infección debida a Salmonella, no especificada"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_9
+msgid "Infección intestinal bacteriana, no especificada"
+msgstr "Infección intestinal bacteriana, no especificada"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_4
+msgid "Infección intestinal viral, no especificada"
+msgstr "Infección intestinal viral, no especificada"
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_B2
+msgid "Infección por VIH (B20)"
+msgstr "Infección por VIH (B20)"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__injection
+msgid "Injection"
+msgstr "Inyección"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__instructions
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_component_form
+msgid "Instructions"
+msgstr "Instrucciones"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_prescription_line_form
+msgid "Instructions for use..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__code
+msgid "Internal code for the treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__cie10_code
+msgid ""
+"International Classification of Diseases 10th Revision code for the "
+"diagnosis"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_9
+msgid "Intoxicación alimentaria bacteriana, no especificada"
+msgstr "Intoxicación alimentaria bacteriana, no especificada"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_4
+msgid "Intoxicación alimentaria debida a Bacillus cereus"
+msgstr "Intoxicación alimentaria debida a Bacillus cereus"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_2
+msgid ""
+"Intoxicación alimentaria debida a Clostridium perfringens [Clostridium "
+"welchii]"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_3
+msgid "Intoxicación alimentaria debida a Vibrio parahaemolyticus"
+msgstr "Intoxicación alimentaria debida a Vibrio parahaemolyticus"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_5
+msgid "Intoxicación alimentaria debida a Vibrio vulnificus"
+msgstr "Intoxicación alimentaria debida a Vibrio vulnificus"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_1
+msgid "Intoxicación alimentaria debida a botulismo"
+msgstr "Intoxicación alimentaria debida a botulismo"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_0
+msgid "Intoxicación alimentaria estafilocócica"
+msgstr "Intoxicación alimentaria estafilocócica"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_is_follower
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_is_follower
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__is_patient
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__is_patient
+msgid "Is Patient"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__isolation
+msgid "Isolation"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Isolation Required"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_3
+msgid "Isosporiasis"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__write_uid
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__write_date
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "List contraindications..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__objectives
+msgid "Main objectives of this treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_therapy
+msgid ""
+"Manage therapy treatments for patients with structured session tracking and "
+"progress monitoring."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__maternity
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Maternity"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_root
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Medical"
+msgstr "Médico"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_affected_apparatus
+msgid "Medical Affected Apparatus"
+msgstr "Aparato Afecto Médico"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__medical_cause
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Medical Cause"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_consultation
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Medical Consultation"
+msgstr "Consulta Médica"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_consultation
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__consultation_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__consultation_ids
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_consultation
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_calendar
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_tree
+msgid "Medical Consultations"
+msgstr "Consultas Médicas"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_partner_form_inherit_medical_history
+msgid "Medical History"
+msgstr "Historial Médico"
+
+#. module: odoo_medical
+#: model:res.groups,name:odoo_medical.group_medical_history_manager
+msgid "Medical History Manager"
+msgstr ""
+
+#. module: odoo_medical
+#: model:res.groups,name:odoo_medical.group_medical_history_user
+msgid "Medical History User"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Medical Information"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__prescription_line_ids
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Medical Prescription"
+msgstr "Prescripción Médica"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_prescription_line
+msgid "Medical Prescription Line"
+msgstr "Línea de Prescripción Médica"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__medical_record_number
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__medical_record_number
+msgid "Medical Record Number"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Medical Rest"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_session_record
+msgid "Medical Session Record"
+msgstr "Registro de Sesión Médica"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_therapy
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__therapy_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__therapy_ids
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_calendar
+msgid "Medical Therapies"
+msgstr "Terapias Médicas"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_therapy
+msgid "Medical Therapy"
+msgstr "Terapia Médica"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_treatment
+msgid "Medical Treatment"
+msgstr "Tratamiento Médico"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_treatment_component
+msgid "Medical Treatment Component"
+msgstr "Componente de Tratamiento Médico"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_treatment_session
+msgid "Medical Treatment Session"
+msgstr "Sesión de Tratamiento Médico"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_treatment
+msgid "Medical Treatments"
+msgstr "Tratamientos Médicos"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_consultation
+msgid ""
+"Medical consultations help you track patient visits, diagnoses, treatments, "
+"and prescriptions."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__contraindications
+msgid "Medical contraindications for this treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__diagnosis
+msgid "Medical diagnosis related to this therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Medical diagnosis..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__medication_name
+msgid "Medication Name"
+msgstr "Nombre del Medicamento"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_21
+msgid "Meningitis por Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_01
+msgid "Meningitis tifoidea"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_has_error
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_has_error
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__my_activity_date_deadline
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__name
+msgid "Name of the affected apparatus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__name
+msgid "Name of the medical treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__name
+msgid "Name of the treatment component"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__name
+msgid "Name of the treatment session"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_03
+msgid "Neumonía tifoidea"
+msgstr "Neumonía tifoidea"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_new_medical_consultation
+#: model:ir.ui.menu,name:odoo_medical.menu_new_medical_consultation
+msgid "New Consultation"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_date_deadline
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_date_deadline
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha Límite de Próxima Actividad"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_summary
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_summary
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de Próxima Actividad"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_type_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_type_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo de Próxima Actividad"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__next_appointment_date
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Next Appointment Date"
+msgstr "Fecha de Próxima Cita"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__none
+msgid "None"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__description
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_needaction_counter
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_needaction_counter
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Acciones"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__completed_sessions
+msgid "Number of completed sessions"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__component_count
+msgid "Number of components in this session"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_has_error_counter
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_has_error_counter
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_needaction_counter
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__message_needaction_counter
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_has_error_counter
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__message_has_error_counter
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__rest_days
+msgid "Number of rest days prescribed"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__session_count
+msgid "Number of sessions in this treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__therapy_count
+msgid "Number of therapies using this apparatus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__therapy_count
+msgid "Number of therapies using this treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A3
+msgid "OTRAS ENFERMEDADES BACTERIANAS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A7
+msgid "OTRAS ENFERMEDADES CAUSADAS POR CLAMIDIAS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A6
+msgid "OTRAS ENFERMEDADES DEBIDAS A ESPIROQUETAS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_B1
+msgid "OTROS HERPESVIRUS HUMANOS"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Objectives"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__observations
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__observations
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_form
+msgid "Observations"
+msgstr "Observaciones"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Obstetric"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__ointment
+msgid "Ointment"
+msgstr "Pomada"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_icd10__chapter
+msgid "Optional ICD-10 chapter (deprecated - use group_id instead)"
+msgstr "Capítulo o grupo ICD-10 opcional"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_icd10_group__code
+msgid "Optional code for the group (e.g., A00-B99)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_24
+msgid "Osteomielitis por Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A01_05
+msgid "Osteomielitis tifoidea"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_A3
+msgid "Otras enfermedades causadas por bacterias (A30-A49)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07
+msgid "Otras enfermedades intestinales debidas a protozoos"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A07_8
+msgid "Otras enfermedades intestinales especificadas debidas a protozoos"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_3
+#: model:medical.icd10,description:odoo_medical.icd10_A08_39
+msgid "Otras enteritis virales"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_89
+msgid "Otras infecciones amebianas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02
+msgid "Otras infecciones debidas a Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_8
+msgid "Otras infecciones especificadas debidas a Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A06_82
+msgid "Otras infecciones genitourinarias amebianas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04
+msgid "Otras infecciones intestinales bacterianas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_8
+msgid "Otras infecciones intestinales bacterianas especificadas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A04_4
+msgid "Otras infecciones intestinales debidas a Escherichia coli"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A08_8
+msgid "Otras infecciones intestinales especificadas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05
+msgid ""
+"Otras intoxicaciones alimentarias bacterianas, no clasificadas bajo otro "
+"concepto"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A05_8
+msgid "Otras intoxicaciones alimentarias debidas a bacterias especificadas"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03_8
+msgid "Otras shigelosis"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,description:odoo_medical.icd10_group_B1
+msgid "Otros virus del herpes humano (B10)"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Overdue Appointments"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_patients
+#: model:ir.ui.menu,name:odoo_medical.menu_action_medical_patients
+#: model:ir.ui.menu,name:odoo_medical.menu_patients_root
+msgid "Pacientes"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__parent_id
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
+msgid "Parent Group"
+msgstr "Grupo Padre"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__medical_history_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__medical_history_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__medical_history_ids
+msgid "Past History"
+msgstr "Antecedentes Médicos"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__patient_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__partner_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__patient_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__patient_id
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_history
+msgid "Patient History Entry"
+msgstr "Entrada del Antecedente del Paciente"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__patient_vat
+msgid "Patient VAT"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__evolution
+msgid "Patient evolution during this session"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__patient_id
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__patient_id
+msgid "Patient receiving the therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Payment Information"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__progress_percentage
+msgid "Percentage of completed sessions"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__pharmaceutical_form
+msgid "Pharmaceutical Form"
+msgstr "Forma Farmacéutica"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Physician"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__attending_physician_id
+msgid "Physician responsible for this therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_25
+msgid "Pielonefritis por Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__posology
+msgid "Posology"
+msgstr "Posología"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Post-operative"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__post_operative
+msgid "Post-operative Control"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__powder
+msgid "Powder"
+msgstr "Polvo"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_prescription_line_form
+msgid "Prescription Line"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Progress %"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__progress_percentage
+msgid "Progress (%)"
+msgstr "Progreso (%)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__quantity_to_dispense
+msgid "Quantity to Dispense"
+msgstr "Cantidad a Dispensar"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Quantity to dispense must be greater than zero."
+msgstr "La cantidad a dispensar debe ser mayor que cero."
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A75
+msgid "RICKETTSIOSIS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__date_record
+msgid "Record Date"
+msgstr "Fecha de Registro"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__name
+msgid "Record Name"
+msgstr "Nombre del Registro"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__session_record_ids
+msgid "Records of therapy sessions"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Reference"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__session_id
+msgid "Reference to the treatment session template"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__therapy_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__therapy_ids
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Related Therapies"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__therapy_id
+msgid "Related therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Reset to Draft"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__state__resolved
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Resolved"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_user_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_user_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__rest_days
+msgid "Rest Days"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__rest_end_date
+msgid "Rest End Date"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__rest_start_date
+msgid "Rest Start Date"
+msgstr ""
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Rest days must be a positive number."
+msgstr ""
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Rest start date must be before rest end date."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_has_sms_error
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_has_sms_error
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_29
+msgid "Salmonella con otra infección localizada"
+msgstr "Salmonella con otra infección localizada"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Schedule"
+msgstr "Programar"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_therapy__state__scheduled
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Scheduled"
+msgstr "Programado"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Search History"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_search
+msgid "Search ICD-10"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
+msgid "Search ICD-10 Groups"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Search Medical Consultations"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__icd10_id
+msgid "Search and assign ICD-10 code and description"
+msgstr "Buscar y asignar código y descripción ICD-10"
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A02_1
+msgid "Septicemia debida a Salmonella"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__sequence
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__sequence
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_icd10_group__sequence
+msgid "Sequence for ordering groups"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__session_sequence
+msgid "Sequence of the session in treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_partner__medical_record_number
+#: model:ir.model.fields,help:odoo_medical.field_res_users__medical_record_number
+msgid "Sequential medical record number"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__name
+msgid "Session Name"
+msgstr "Nombre de la Sesión"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_session_record
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__session_record_ids
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_session_record
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_calendar
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Session Records"
+msgstr "Registros de Sesión"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__session_sequence
+msgid "Session Sequence"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_session_form
+msgid "Session name..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__session_id
+msgid "Session this component belongs to"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Sessions"
+msgstr "Sesiones"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__session_count
+msgid "Sessions Count"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__session_ids
+msgid "Sessions that compose this treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__active
+msgid "Set to false to hide this apparatus without removing it"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__active
+msgid "Set to false to hide this component without removing it"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__active
+msgid "Set to false to hide this session without removing it"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__active
+msgid "Set to false to hide this treatment without removing it"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03
+msgid "Shigelosis"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03_9
+msgid "Shigelosis de tipo no especificado"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03_2
+msgid "Shigelosis debida a Shigella boydii"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03_0
+msgid "Shigelosis debida a Shigella dysenteriae"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03_1
+msgid "Shigelosis debida a Shigella flexneri"
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10,description:odoo_medical.icd10_A03_3
+msgid "Shigelosis debida a Shigella sonnei"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__social
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Social"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__solution
+msgid "Solution"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__instructions
+msgid "Specific instructions for this component"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__spray
+msgid "Spray"
+msgstr "Aerosol"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Start Consultation"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__start_date
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Start Therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__start_datetime
+msgid "Start Time"
+msgstr "Hora de Inicio"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__rest_start_date
+msgid "Start date of medical rest"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__state
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__state
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "State"
+msgstr "Estado"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__state
+msgid "State of the session record"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__state
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Status"
+msgstr "Estado"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__activity_state
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__activity_state
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__surgical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Surgical"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
+msgid "Symptoms and Restrictions"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__syrup
+msgid "Syrup"
+msgstr "Jarabe"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__systolic_pressure
+msgid "Systolic Pressure (mmHg)"
+msgstr "Presión Sistólica (mmHg)"
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "Systolic pressure must be higher than diastolic pressure."
+msgstr ""
+
+#. module: odoo_medical
+#: model:medical.icd10.group,name:odoo_medical.icd10_group_A1
+msgid "TUBERCULOSIS"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__tablet
+msgid "Tablet"
+msgstr "Tableta"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__telework
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Telework"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__patient_vat
+msgid ""
+"The Tax Identification Number. Values here will be validated based on the "
+"country format. You can use '/' to indicate that the partner is not subject "
+"to tax."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.constraint,message:odoo_medical.constraint_medical_affected_apparatus_name_unique
+msgid "The apparatus name must be unique!"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.constraint,message:odoo_medical.constraint_medical_treatment_code_unique
+msgid "The treatment code must be unique!"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_therapy
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Therapies"
+msgstr "Terapias"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__therapy_ids
+msgid "Therapies using this apparatus"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__therapy_ids
+msgid "Therapies using this treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__therapist_id
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+msgid "Therapist"
+msgstr "Terapeuta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_session_record__therapist_id
+msgid "Therapist who conducted the session"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__therapy_id
+msgid "Therapy"
+msgstr "Terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__therapy_count
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__therapy_count
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__therapy_count
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__therapy_count
+msgid "Therapy Count"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__therapy_date
+msgid "Therapy Date"
+msgstr "Fecha de Terapia"
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_therapy_root
+msgid "Therapy Management"
+msgstr "Gestión de Terapias"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__notes
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
+msgid "Therapy Notes"
+msgstr "Notas de Terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__name
+msgid "Therapy Reference"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "This Month"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "This Week"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
+msgid "Title"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_session_record_search
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Today"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
+msgid "Top Level Groups"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__total_estimated_duration
+msgid "Total Estimated Duration (Minutes)"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__total_icd10_count
+msgid "Total ICD-10 Codes"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__total_sessions
+msgid "Total Sessions"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__estimated_duration
+msgid "Total estimated duration based on components"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment__total_estimated_duration
+msgid "Total estimated duration for all sessions"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__total_sessions
+msgid "Total number of sessions in this therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__total_to_pay
+msgid "Total to Pay"
+msgstr "Total a Pagar"
+
+#. module: odoo_medical
+#: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_session_record
+msgid ""
+"Track individual therapy session records with entry/exit times, evolution, "
+"and observations."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__traffic_accident
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Traffic Accident"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__treatment_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__treatment_id
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
+msgid "Treatment"
+msgstr "Tratamiento"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__code
+msgid "Treatment Code"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_treatment_component
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__treatment_component_ids
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_treatment_component
+msgid "Treatment Components"
+msgstr "Componentes de Tratamiento"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__treatment_description
+msgid "Treatment Description"
+msgstr "Descripción del Tratamiento"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__name
+msgid "Treatment Name"
+msgstr "Nombre del Tratamiento"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__objectives
+msgid "Treatment Objectives"
+msgstr "Objetivos del Tratamiento"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__session_id
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__session_id
+msgid "Treatment Session"
+msgstr "Sesión de Tratamiento"
+
+#. module: odoo_medical
+#: model:ir.actions.act_window,name:odoo_medical.action_medical_treatment_session
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__session_ids
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_treatment_session
+msgid "Treatment Sessions"
+msgstr "Sesiones de Tratamiento"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
+msgid "Treatment name..."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__treatment_id
+msgid "Treatment protocol to be applied"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__treatment_id
+msgid "Treatment this session belongs to"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_treatment
+msgid "Treatments"
+msgstr "Tratamientos"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__activity_exception_decoration
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__activity_exception_decoration
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__work_restriction_type
+msgid "Type of work restriction recommended"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__name
+msgid "Unique reference for this therapy"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_form
+msgid "Use Group field instead"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__sequence
+msgid "Used to order components"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__sequence
+msgid "Used to order sessions in treatment"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__state__waiting
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Waiting"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__website_message_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_history__website_message_ids
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_consultation__website_message_ids
+#: model:ir.model.fields,help:odoo_medical.field_medical_history__website_message_ids
+#: model:ir.model.fields,help:odoo_medical.field_medical_therapy__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__weight_kg
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__weight_kg
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__weight_kg
+msgid "Weight (Kg)"
+msgstr "Peso (Kg)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__weight_lb
+#: model:ir.model.fields,field_description:odoo_medical.field_res_partner__weight_lb
+#: model:ir.model.fields,field_description:odoo_medical.field_res_users__weight_lb
+msgid "Weight (Lb)"
+msgstr "Peso (Lb)"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_search
+msgid "With Group"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "With Next Appointment"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "With Symptoms"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "With Work Restriction"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_search
+msgid "Without Group"
+msgstr ""
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Without Symptoms"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__work_accident
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Work Accident"
+msgstr ""
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__work_restriction_type
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Work Restriction Type"
+msgstr "Tipo de Restricción Laboral"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__wound_care
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
+msgid "Wound Care"
+msgstr ""
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_history.py:0
+msgid "You cannot create recursive group hierarchies."
+msgstr "No puede crear jerarquías de grupo recursivas."
+
+#. module: odoo_medical
+#. odoo-python
+#: code:addons/odoo_medical/models/medical_consultation.py:0
+msgid "You must configure the consultation item and journal."
+msgstr "Debe configurar el item y diario de consulta."
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__concentration_unit__mcg
+msgid "mcg"
+msgstr "mcg"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__concentration_unit__mg
+msgid "mg"
+msgstr "mg"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__concentration_unit__ml
+msgid "ml"
+msgstr "ml"

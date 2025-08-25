@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Therapy Menu Items -->
+    <menuitem id="menu_medical_therapy_root"
+              name="Therapy Management"
+              parent="menu_medical_root"
+              sequence="30"/>
+
+    <menuitem id="menu_medical_therapy"
+              name="Therapies"
+              action="action_medical_therapy"
+              parent="menu_medical_therapy_root"
+              sequence="10"/>
+
+    <menuitem id="menu_medical_session_record"
+              name="Session Records"
+              action="action_medical_session_record"
+              parent="menu_medical_therapy_root"
+              sequence="20"/>
+
+    <!-- Configuration submenu -->
+    <menuitem id="menu_medical_therapy_config"
+              name="Configuration"
+              parent="menu_medical_configuration"
+              sequence="100"/>
+
+    <menuitem id="menu_medical_treatment"
+              name="Treatments"
+              action="action_medical_treatment"
+              parent="menu_medical_therapy_config"
+              sequence="10"/>
+
+    <menuitem id="menu_medical_affected_apparatus"
+              name="Affected Apparatus"
+              action="action_medical_affected_apparatus"
+              parent="menu_medical_therapy_config"
+              sequence="20"/>
+
+    <menuitem id="menu_medical_treatment_session"
+              name="Treatment Sessions"
+              action="action_medical_treatment_session"
+              parent="menu_medical_therapy_config"
+              sequence="30"/>
+
+    <menuitem id="menu_medical_treatment_component"
+              name="Treatment Components"
+              action="action_medical_treatment_component"
+              parent="menu_medical_therapy_config"
+              sequence="40"/>
+</odoo>

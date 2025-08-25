@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo X-ray Areas -->
+        <record id="xray_area_chest" model="medical.xray.area">
+            <field name="name">Chest</field>
+            <field name="description">Chest X-ray area including lungs, heart, and ribcage</field>
+        </record>
+
+        <record id="xray_area_spine" model="medical.xray.area">
+            <field name="name">Spine</field>
+            <field name="description">Spinal column X-ray area</field>
+        </record>
+
+        <record id="xray_area_abdomen" model="medical.xray.area">
+            <field name="name">Abdomen</field>
+            <field name="description">Abdominal X-ray area</field>
+        </record>
+
+        <record id="xray_area_pelvis" model="medical.xray.area">
+            <field name="name">Pelvis</field>
+            <field name="description">Pelvic X-ray area</field>
+        </record>
+
+        <record id="xray_area_skull" model="medical.xray.area">
+            <field name="name">Skull</field>
+            <field name="description">Skull and cranial X-ray area</field>
+        </record>
+
+        <record id="xray_area_extremities" model="medical.xray.area">
+            <field name="name">Extremities</field>
+            <field name="description">Arms and legs X-ray area</field>
+        </record>
+    </data>
+</odoo>

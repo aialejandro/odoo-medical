@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Medical Affected Apparatus Demo Data -->
+        <record id="apparatus_knee" model="medical.affected.apparatus">
+            <field name="name">Knee</field>
+            <field name="description">Knee joint and surrounding structures</field>
+        </record>
+
+        <record id="apparatus_shoulder" model="medical.affected.apparatus">
+            <field name="name">Shoulder</field>
+            <field name="description">Shoulder joint and rotator cuff</field>
+        </record>
+
+        <record id="apparatus_lower_back" model="medical.affected.apparatus">
+            <field name="name">Lower Back</field>
+            <field name="description">Lumbar spine region</field>
+        </record>
+
+        <record id="apparatus_ankle" model="medical.affected.apparatus">
+            <field name="name">Ankle</field>
+            <field name="description">Ankle joint and foot structures</field>
+        </record>
+
+        <!-- Medical Treatments Demo Data -->
+        <record id="treatment_physiotherapy_basic" model="medical.treatment">
+            <field name="name">Basic Physiotherapy</field>
+            <field name="code">PHYSIO-001</field>
+            <field name="description">Standard physiotherapy treatment for mobility and strength recovery</field>
+            <field name="objectives"><![CDATA[
+                <ul>
+                    <li>Improve range of motion</li>
+                    <li>Strengthen affected muscles</li>
+                    <li>Reduce pain and inflammation</li>
+                    <li>Restore functional movement</li>
+                </ul>
+            ]]></field>
+        </record>
+
+        <record id="treatment_rehabilitation_advanced" model="medical.treatment">
+            <field name="name">Advanced Rehabilitation</field>
+            <field name="code">REHAB-001</field>
+            <field name="description">Comprehensive rehabilitation program for complex injuries</field>
+        </record>
+
+        <!-- Treatment Sessions for Basic Physiotherapy -->
+        <record id="session_assessment" model="medical.treatment.session">
+            <field name="name">Initial Assessment</field>
+            <field name="sequence">10</field>
+            <field name="treatment_id" ref="treatment_physiotherapy_basic"/>
+            <field name="description">Comprehensive initial assessment and treatment planning</field>
+        </record>
+
+        <record id="session_mobilization" model="medical.treatment.session">
+            <field name="name">Joint Mobilization</field>
+            <field name="sequence">20</field>
+            <field name="treatment_id" ref="treatment_physiotherapy_basic"/>
+            <field name="description">Manual therapy and joint mobilization techniques</field>
+        </record>
+
+        <record id="session_strengthening" model="medical.treatment.session">
+            <field name="name">Strengthening Exercises</field>
+            <field name="sequence">30</field>
+            <field name="treatment_id" ref="treatment_physiotherapy_basic"/>
+            <field name="description">Progressive resistance and strengthening exercises</field>
+        </record>
+
+        <!-- Treatment Sessions for Advanced Rehabilitation -->
+        <record id="session_advanced_assessment" model="medical.treatment.session">
+            <field name="name">Advanced Assessment</field>
+            <field name="sequence">10</field>
+            <field name="treatment_id" ref="treatment_rehabilitation_advanced"/>
+        </record>
+
+        <record id="session_functional_training" model="medical.treatment.session">
+            <field name="name">Functional Training</field>
+            <field name="sequence">20</field>
+            <field name="treatment_id" ref="treatment_rehabilitation_advanced"/>
+        </record>
+
+        <!-- Treatment Components for Sessions -->
+        <record id="component_range_of_motion" model="medical.treatment.component">
+            <field name="name">Range of Motion Assessment</field>
+            <field name="sequence">10</field>
+            <field name="session_id" ref="session_assessment"/>
+            <field name="duration_minutes">15</field>
+            <field name="description">Measure and document current range of motion</field>
+        </record>
+
+        <record id="component_strength_testing" model="medical.treatment.component">
+            <field name="name">Strength Testing</field>
+            <field name="sequence">20</field>
+            <field name="session_id" ref="session_assessment"/>
+            <field name="duration_minutes">20</field>
+            <field name="description">Manual muscle testing and strength evaluation</field>
+        </record>
+
+        <record id="component_pain_assessment" model="medical.treatment.component">
+            <field name="name">Pain Assessment</field>
+            <field name="sequence">30</field>
+            <field name="session_id" ref="session_assessment"/>
+            <field name="duration_minutes">10</field>
+            <field name="description">Evaluate pain levels and characteristics</field>
+        </record>
+
+        <record id="component_joint_mobilization" model="medical.treatment.component">
+            <field name="name">Manual Joint Mobilization</field>
+            <field name="sequence">10</field>
+            <field name="session_id" ref="session_mobilization"/>
+            <field name="duration_minutes">25</field>
+            <field name="description">Apply manual mobilization techniques to improve joint mobility</field>
+        </record>
+
+        <record id="component_soft_tissue" model="medical.treatment.component">
+            <field name="name">Soft Tissue Massage</field>
+            <field name="sequence">20</field>
+            <field name="session_id" ref="session_mobilization"/>
+            <field name="duration_minutes">15</field>
+            <field name="description">Therapeutic massage for muscle relaxation</field>
+        </record>
+
+        <record id="component_resistance_exercises" model="medical.treatment.component">
+            <field name="name">Resistance Exercises</field>
+            <field name="sequence">10</field>
+            <field name="session_id" ref="session_strengthening"/>
+            <field name="duration_minutes">30</field>
+            <field name="description">Progressive resistance training for muscle strengthening</field>
+        </record>
+
+        <record id="component_balance_training" model="medical.treatment.component">
+            <field name="name">Balance and Proprioception Training</field>
+            <field name="sequence">20</field>
+            <field name="session_id" ref="session_strengthening"/>
+            <field name="duration_minutes">20</field>
+            <field name="description">Exercises to improve balance and joint position sense</field>
+        </record>
+    </data>
+</odoo>

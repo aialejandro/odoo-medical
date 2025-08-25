@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Consultation Form View -->
+    <record id="view_medical_consultation_form" model="ir.ui.view">
+        <field name="name">medical.consultation.form</field>
+        <field name="model">medical.consultation</field>
+        <field name="arch" type="xml">
+            <form string="Medical Consultation">
+                <header>
+                    
+                </header>
+                <header>
+                    <button name="action_start_consultation" type="object" string="Start Consultation" class="oe_highlight" invisible="state != 'waiting'"/>
+                    <button name="action_finish_consultation" type="object" string="Finish Consultation" class="oe_highlight" invisible="state != 'in_progress'"/>
+                    <button name="action_create_invoice" type="object" string="Create Invoice" class="oe_highlight" invisible="state != 'finished'"/>
+                    <button name="action_print_private_certificate" type="object" string="Print Private Certificate" class="btn-secondary" invisible="state != 'finished'"/>
+                    <button name="action_print_iess_certificate" type="object" string="Print IESS Certificate" class="btn-secondary" invisible="state != 'finished'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="waiting,in_progress,finished"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="patient_id" options="{'no_create': True}"/>
+                            <field name="birth_date"/>
+                            <field name="age" readonly="1"/>
+                            <field name="consultation_date"/>
+                            <field name="doctor_id"/>
+                            <field name="doctor_license"/>
+                        </group>
+                        <group>
+                            <field name="consultation_type"/>
+                            <field name="systolic_pressure"/>
+                            <field name="diastolic_pressure"/>
+                            <field name="weight_kg"/>
+                            <field name="weight_lb"/>
+                            <field name="duration_minutes" />
+                            <field name="start_datetime" invisible="1"/>
+                            <field name="end_datetime" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="medical_history_ids" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="consultation_reason" placeholder="Describe the reason for this consultation..."/>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Medical Information" name="medical_info">
+                            <group>
+                                <field name="diagnosis" placeholder="Enter the diagnosis..."/>
+                                <field name="cie10_code" options="{'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="treatment_description" placeholder="Describe the treatment..."/>
+                            </group>
+                            <group string="Symptoms and Restrictions">
+                                <field name="has_symptoms"/>
+                                <field name="work_restriction_type"/>
+                                <field name="medical_cause"/>
+                            </group>
+                            <group string="Medical Rest">
+                                <field name="rest_days"/>
+                                <field name="rest_start_date"/>
+                                <field name="rest_end_date"/>
+                            </group>
+                            <group string="Medical Prescription">
+                                <field name="prescription_line_ids" nolabel="1">
+                                    <list editable="bottom">
+                                        <field name="medication_name"/>
+                                        <field name="pharmaceutical_form"/>
+                                        <field name="concentration"/>
+                                        <field name="concentration_unit"/>
+                                        <field name="quantity_to_dispense"/>
+                                        <field name="posology"/>
+                                    </list>
+                                </field>
+                            </group>
+                            <group>
+                                <field name="evolution" placeholder="Describe the patient's evolution..."/>
+                            </group>
+                            <group>
+                                <field name="observations" placeholder="Additional observations..."/>
+                            </group>
+                            <group>
+                                <field name="next_appointment_date"/>
+                            </group>
+                        </page>
+                        
+                        <page string="Payment Information" name="payment_info">
+                            <group>
+                                <group>
+                                    <field name="consultation_fee"/>
+                                    <field name="discount_percentage"/>
+                                    <field name="total_to_pay" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="consultation_product_id"/>
+                                    <field name="consultation_tax_id"/>
+                                    <field name="consultation_journal_id"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Chatter -->
+                <chatter reload_on_attachment="True"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Medical Consultation Tree View -->
+    <record id="view_medical_consultation_tree" model="ir.ui.view">
+        <field name="name">medical.consultation.tree</field>
+        <field name="model">medical.consultation</field>
+        <field name="arch" type="xml">
+            <list string="Medical Consultations" decoration-info="state=='waiting'" decoration-warning="state=='in_progress'" decoration-success="state=='finished'">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="consultation_date"/>
+                <field name="state"/>
+                <field name="consultation_fee"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Medical Consultation Search View -->
+    <record id="view_medical_consultation_search" model="ir.ui.view">
+        <field name="name">medical.consultation.search</field>
+        <field name="model">medical.consultation</field>
+        <field name="arch" type="xml">
+            <search string="Search Medical Consultations">
+                <field name="name" string="Reference"/>
+                <field name="patient_id" string="Patient"/>
+                <field name="doctor_id" string="Doctor"/>
+                <field name="consultation_reason"/>
+                <field name="diagnosis"/>
+                <field name="medical_cause"/>
+                <field name="work_restriction_type"/>
+                
+                <filter string="Waiting" name="waiting" domain="[('state', '=', 'waiting')]"/>
+                <filter string="In Progress" name="in_progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter string="Finished" name="finished" domain="[('state', '=', 'finished')]"/>
+                
+                <separator/>
+                <filter string="With Symptoms" name="with_symptoms" domain="[('has_symptoms', '=', True)]"/>
+                <filter string="Without Symptoms" name="without_symptoms" domain="[('has_symptoms', '=', False)]"/>
+                
+                <separator/>
+                <filter string="With Work Restriction" name="with_restriction" domain="[('work_restriction_type', '!=', False), ('work_restriction_type', '!=', 'none')]"/>
+                <filter string="Isolation Required" name="isolation" domain="[('work_restriction_type', '=', 'isolation')]"/>
+                <filter string="Absolute Rest" name="absolute_rest" domain="[('work_restriction_type', '=', 'absolute_rest')]"/>
+                <filter string="Telework" name="telework" domain="[('work_restriction_type', '=', 'telework')]"/>
+                
+                <separator/>
+                <filter string="General Illness" name="general_illness" domain="[('medical_cause', '=', 'general_illness')]"/>
+                <filter string="Work Accident" name="work_accident" domain="[('medical_cause', '=', 'work_accident')]"/>
+                <filter string="Traffic Accident" name="traffic_accident" domain="[('medical_cause', '=', 'traffic_accident')]"/>
+                <filter string="Maternity" name="maternity" domain="[('medical_cause', '=', 'maternity')]"/>
+                <filter string="Catastrophic Illness" name="catastrophic_illness" domain="[('medical_cause', '=', 'catastrophic_illness')]"/>
+                
+                <filter string="Waiting" name="waiting" domain="[('state', '=', 'waiting')]"/>
+                <filter string="In Progress" name="in_progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter string="Finished" name="finished" domain="[('state', '=', 'finished')]"/>
+                
+                <separator/>
+                <filter string="Today" name="today" domain="[('consultation_date', '>=', datetime.datetime.combine(context_today(), datetime.time(0,0,0))), ('consultation_date', '&lt;=', datetime.datetime.combine(context_today(), datetime.time(23,59,59)))]"/>
+                <filter string="This Week" name="this_week" domain="[('consultation_date', '&gt;=', (context_today() + relativedelta(weeks=-1, weekday=0)).strftime('%Y-%m-%d')), ('consultation_date', '&lt;=', (context_today() + relativedelta(weekday=6)).strftime('%Y-%m-%d'))]"/>
+                <filter string="This Month" name="this_month" domain="[('consultation_date', '&gt;=', (context_today().replace(day=1)).strftime('%Y-%m-%d')), ('consultation_date', '&lt;=', (context_today() + relativedelta(months=1, day=1, days=-1)).strftime('%Y-%m-%d'))]"/>
+                
+                <separator/>
+                <filter string="First Time" name="first_time" domain="[('consultation_type', '=', 'first_time')]"/>
+                <filter string="Follow-up" name="follow_up" domain="[('consultation_type', '=', 'follow_up')]"/>
+                <filter string="Post-operative" name="post_operative" domain="[('consultation_type', '=', 'post_operative')]"/>
+                <filter string="Wound Care" name="wound_care" domain="[('consultation_type', '=', 'wound_care')]"/>
+                
+                <separator/>
+                <filter string="With Next Appointment" name="with_next_appointment" domain="[('next_appointment_date', '!=', False)]"/>
+                <filter string="Overdue Appointments" name="overdue_appointments" domain="[('next_appointment_date', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                
+                <group expand="0" string="Group By">
+                    <filter string="Patient" name="group_patient" context="{'group_by': 'patient_id'}"/>
+                    <filter string="Doctor" name="group_doctor" context="{'group_by': 'doctor_id'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Consultation Type" name="group_type" context="{'group_by': 'consultation_type'}"/>
+                    <filter string="Medical Cause" name="group_medical_cause" context="{'group_by': 'medical_cause'}"/>
+                    <filter string="Work Restriction Type" name="group_restriction" context="{'group_by': 'work_restriction_type'}"/>
+                    <filter string="Has Symptoms" name="group_symptoms" context="{'group_by': 'has_symptoms'}"/>
+                    <filter string="Consultation Date" name="group_date" context="{'group_by': 'consultation_date:day'}"/>
+                    <filter string="Next Appointment Date" name="group_next_date" context="{'group_by': 'next_appointment_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Medical Consultation Kanban View -->
+    <record id="view_medical_consultation_kanban" model="ir.ui.view">
+        <field name="name">medical.consultation.kanban</field>
+        <field name="model">medical.consultation</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="consultation_date"/>
+                <field name="consultation_type"/>
+                <field name="state"/>
+                <field name="total_to_pay"/>
+                <field name="next_appointment_date"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_content">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <t t-esc="record.name.value"/>
+                                        </strong>
+                                    </div>
+                                    <div class="o_dropdown_kanban dropdown">
+                                        <a class="dropdown-toggle o-no-caret btn" role="button" data-bs-toggle="dropdown" data-bs-display="static" href="#" aria-label="Dropdown" title="Dropdown">
+                                            <span class="fa fa-ellipsis-v"/>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                            <a role="menuitem" type="delete" class="dropdown-item">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div>
+                                        <i class="fa fa-user"/> <t t-esc="record.patient_id.value"/>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-calendar"/> <t t-esc="record.consultation_date.value"/>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-tag"/> <t t-esc="record.consultation_type.value"/>
+                                    </div>
+                                    <div t-if="record.total_to_pay.value">
+                                        <i class="fa fa-money"/> $<t t-esc="record.total_to_pay.value"/>
+                                    </div>
+                                    <div t-if="record.next_appointment_date.value">
+                                        <i class="fa fa-clock-o"/> Next: <t t-esc="record.next_appointment_date.value"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Medical Consultation Calendar View -->
+    <record id="view_medical_consultation_calendar" model="ir.ui.view">
+        <field name="name">medical.consultation.calendar</field>
+        <field name="model">medical.consultation</field>
+        <field name="arch" type="xml">
+            <calendar string="Medical Consultations" date_start="consultation_date" color="state">
+                <field name="patient_id"/>
+                <field name="consultation_type"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Medical Consultation Action -->
+    <record id="action_medical_consultation" model="ir.actions.act_window">
+        <field name="name">Medical Consultations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.consultation</field>
+        <field name="view_mode">list,form,kanban,calendar</field>
+        <field name="context">{'search_default_today': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first medical consultation!
+            </p>
+            <p>
+                Medical consultations help you track patient visits, diagnoses, treatments, and prescriptions.
+            </p>
+        </field>
+    </record>
+
+    <!-- Medical Prescription Line Form View -->
+    <record id="view_medical_prescription_line_form" model="ir.ui.view">
+        <field name="name">medical.prescription.line.form</field>
+        <field name="model">medical.prescription.line</field>
+        <field name="arch" type="xml">
+            <form string="Prescription Line">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="medication_name"/>
+                            <field name="pharmaceutical_form"/>
+                            <field name="concentration"/>
+                            <field name="concentration_unit"/>
+                        </group>
+                        <group>
+                            <field name="quantity_to_dispense"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="posology" placeholder="Instructions for use..."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Nueva Consulta Action -->
+    <record id="action_new_medical_consultation" model="ir.actions.act_window">
+    <field name="name">New Consultation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.consultation</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Main Medical Menu Root -->
+    <menuitem id="menu_medical_root" name="Medical" sequence="10" action="action_medical_consultation" web_icon="odoo_medical,static/description/icon.png"/>
+
+    <!-- Menu Items -->
+    <!-- Menú padre Consultas -->
+    <menuitem id="menu_consultations_root" 
+              name="Consultations" 
+              parent="menu_medical_root" 
+              sequence="10"/>
+    
+    <!-- Nueva Consulta -->
+    <menuitem id="menu_new_medical_consultation" 
+              name="New Consultation" 
+              parent="menu_consultations_root" 
+              action="action_new_medical_consultation" 
+              sequence="10"/>
+    
+    <!-- Consultas médicas (existente) -->
+    <menuitem id="menu_medical_consultation" 
+              name="Medical Consultations" 
+              parent="menu_consultations_root" 
+              action="action_medical_consultation" 
+              sequence="20"/>
+
+</odoo>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Affected Apparatus Views -->
+    <record id="view_medical_affected_apparatus_tree" model="ir.ui.view">
+        <field name="name">medical.affected.apparatus.tree</field>
+        <field name="model">medical.affected.apparatus</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="therapy_count"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_affected_apparatus_form" model="ir.ui.view">
+        <field name="name">medical.affected.apparatus.form</field>
+        <field name="model">medical.affected.apparatus</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_therapies" 
+                                type="object" 
+                                class="oe_stat_button" 
+                                icon="fa-stethoscope"
+                                invisible="therapy_count == 0">
+                            <field name="therapy_count" widget="statinfo" string="Therapies"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Apparatus name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="Add a description..."/>
+                        </page>
+                        <page string="Related Therapies" name="therapies" invisible="therapy_count == 0">
+                            <field name="therapy_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="patient_id"/>
+                                    <field name="therapy_date"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_medical_affected_apparatus" model="ir.actions.act_window">
+        <field name="name">Affected Apparatus</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.affected.apparatus</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new affected apparatus
+            </p>
+            <p>
+                Define the apparatus that can be affected and require therapy treatment.
+            </p>
+        </field>
+    </record>
+</odoo>

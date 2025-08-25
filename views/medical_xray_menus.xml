@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- X-ray Menu Items -->
+    <menuitem id="menu_medical_xray_root"
+              name="X-ray Management"
+              parent="menu_medical_root"
+              sequence="40"/>
+
+    <menuitem id="menu_medical_xray_orders"
+              name="X-ray Orders"
+              action="action_medical_xray_order"
+              parent="menu_medical_xray_root"
+              sequence="10"/>
+
+    <!-- Configuration submenu for X-ray -->
+    <menuitem id="menu_medical_xray_areas"
+              name="X-ray Areas"
+              action="action_medical_xray_area"
+              parent="menu_medical_configuration"
+              sequence="50"/>
+</odoo>

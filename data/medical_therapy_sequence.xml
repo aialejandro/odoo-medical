@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequence for Medical Therapy -->
+        <record id="seq_medical_therapy" model="ir.sequence">
+            <field name="name">Medical Therapy</field>
+            <field name="code">medical.therapy</field>
+            <field name="prefix">THR</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

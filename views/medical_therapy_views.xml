@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Medical Therapy Views -->
+    <record id="view_medical_therapy_tree" model="ir.ui.view">
+        <field name="name">medical.therapy.tree</field>
+        <field name="model">medical.therapy</field>
+        <field name="arch" type="xml">
+            <list decoration-info="state == 'draft'" 
+                  decoration-primary="state == 'scheduled'"
+                  decoration-warning="state == 'in_progress'"
+                  decoration-success="state == 'completed'"
+                  decoration-muted="state == 'cancelled'">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="therapy_date"/>
+                <field name="affected_apparatus_id"/>
+                <field name="treatment_id"/>
+                <field name="price"/>
+                <field name="total_sessions"/>
+                <field name="completed_sessions"/>
+                <field name="progress_percentage" widget="progressbar"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_therapy_form" model="ir.ui.view">
+        <field name="name">medical.therapy.form</field>
+        <field name="model">medical.therapy</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_schedule" string="Schedule" type="object" 
+                            class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_start" string="Start Therapy" type="object" 
+                            class="oe_highlight" invisible="state != 'scheduled'"/>
+                    <button name="action_complete" string="Complete" type="object" 
+                            class="oe_highlight" invisible="state != 'in_progress'"/>
+                    <button name="action_cancel" string="Cancel" type="object" 
+                            invisible="state in ['completed', 'cancelled']"/>
+                    <button name="action_reset_to_draft" string="Reset to Draft" type="object" 
+                            invisible="state == 'draft'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,scheduled,in_progress,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_create_invoice" 
+                                type="object" 
+                                string="Create Invoice"
+                                class="oe_stat_button btn-primary"
+                                icon="fa-usd"
+                                invisible="invoice_id or state == 'cancelled'"
+                                help="Create an invoice for this therapy"/>
+                        <button name="action_create_invoice" 
+                                type="object" 
+                                string="View Invoice"
+                                class="oe_stat_button"
+                                icon="fa-usd"
+                                invisible="not invoice_id"
+                                help="View the therapy invoice">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Invoice</span>
+                                <span class="o_stat_value">
+                                    <field name="invoice_state"/>
+                                </span>
+                            </div>
+                        </button>
+                        <button name="action_view_session_records" 
+                                type="object" 
+                                class="oe_stat_button" 
+                                icon="fa-calendar-check-o"
+                                invisible="total_sessions == 0">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="completed_sessions"/>/<field name="total_sessions"/>
+                                </span>
+                                <span class="o_stat_text">Sessions</span>
+                            </div>
+                        </button>
+                        <button name="action_view_progress" 
+                                type="object" 
+                                class="oe_stat_button" 
+                                icon="fa-line-chart"
+                                invisible="total_sessions == 0">
+                            <field name="progress_percentage" widget="statinfo" string="Progress %"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="patient_id"/>
+                            <field name="therapy_date"/>
+                            <field name="affected_apparatus_id"/>
+                            <field name="treatment_id"/>
+                        </group>
+                        <group>
+                            <field name="attending_physician_id"/>
+                            <field name="start_date" readonly="state in ['draft', 'scheduled']"/>
+                            <field name="end_date" readonly="state != 'completed'"/>
+                            <field name="price"/>
+                        </group>
+                    </group>
+                    <group string="Invoicing Configuration" invisible="state == 'cancelled'">
+                        <group>
+                            <field name="therapy_product_id"/>
+                            <field name="therapy_tax_id"/>
+                        </group>
+                        <group>
+                            <field name="therapy_journal_id"/>
+                            <field name="invoice_id" readonly="1" invisible="not invoice_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Diagnosis &amp; Notes" name="notes">
+                            <group>
+                                <field name="diagnosis" string="Diagnosis" nolabel="1" placeholder="Medical diagnosis..."/>
+                            </group>
+                            <separator string="Therapy Notes"/>
+                            <field name="notes" placeholder="General therapy notes..."/>
+                        </page>
+                        <page string="Session Records" name="sessions">
+                            <field name="session_record_ids">
+                                <list decoration-info="state == 'draft'" 
+                                      decoration-warning="state == 'in_progress'"
+                                      decoration-success="state == 'completed'"
+                                      decoration-muted="state == 'cancelled'">
+                                    <field name="session_sequence" string="#"/>
+                                    <field name="session_id"/>
+                                    <field name="entry_datetime"/>
+                                    <field name="exit_datetime"/>
+                                    <field name="duration_minutes"/>
+                                    <field name="therapist_id"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter reload_on_attachment="True"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_medical_therapy_calendar" model="ir.ui.view">
+        <field name="name">medical.therapy.calendar</field>
+        <field name="model">medical.therapy</field>
+        <field name="arch" type="xml">
+            <calendar string="Medical Therapies" 
+                     date_start="therapy_date" 
+                     color="affected_apparatus_id">
+                <field name="patient_id"/>
+                <field name="treatment_id"/>
+                <field name="affected_apparatus_id"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_medical_therapy_search" model="ir.ui.view">
+        <field name="name">medical.therapy.search</field>
+        <field name="model">medical.therapy</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="treatment_id"/>
+                <field name="affected_apparatus_id"/>
+                <field name="attending_physician_id"/>
+                <field name="price"/>
+                <separator/>
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="scheduled" string="Scheduled" domain="[('state', '=', 'scheduled')]"/>
+                <filter name="in_progress" string="In Progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter name="completed" string="Completed" domain="[('state', '=', 'completed')]"/>
+                <separator/>
+                <filter name="today" string="Today" domain="[('therapy_date', '=', context_today())]"/>
+                <filter name="this_week" string="This Week" 
+                        domain="[('therapy_date', '&gt;=', (context_today() - datetime.timedelta(days=context_today().weekday())).strftime('%Y-%m-%d')),
+                                 ('therapy_date', '&lt;=', (context_today() + datetime.timedelta(days=6-context_today().weekday())).strftime('%Y-%m-%d'))]"/>
+                <filter name="this_month" string="This Month" 
+                        domain="[('therapy_date', '&gt;=', context_today().strftime('%Y-%m-01')),
+                                 ('therapy_date', '&lt;=', (context_today().replace(day=1) + datetime.timedelta(days=32)).replace(day=1) - datetime.timedelta(days=1))]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="group_patient" string="Patient" context="{'group_by': 'patient_id'}"/>
+                    <filter name="group_apparatus" string="Affected Apparatus" context="{'group_by': 'affected_apparatus_id'}"/>
+                    <filter name="group_treatment" string="Treatment" context="{'group_by': 'treatment_id'}"/>
+                    <filter name="group_physician" string="Physician" context="{'group_by': 'attending_physician_id'}"/>
+                    <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_date" string="Date" context="{'group_by': 'therapy_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_medical_therapy" model="ir.actions.act_window">
+        <field name="name">Medical Therapies</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.therapy</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="search_view_id" ref="view_medical_therapy_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new medical therapy
+            </p>
+            <p>
+                Manage therapy treatments for patients with structured session tracking and progress monitoring.
+            </p>
+        </field>
+    </record>
+</odoo>

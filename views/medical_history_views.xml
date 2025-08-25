@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_medical_icd10_tree" model="ir.ui.view">
+        <field name="name">medical.icd10.tree</field>
+        <field name="model">medical.icd10</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="display_name"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_icd10_form" model="ir.ui.view">
+        <field name="name">medical.icd10.form</field>
+        <field name="model">medical.icd10</field>
+        <field name="arch" type="xml">
+            <form string="ICD-10">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="description"/>
+                            <field name="group_id"/>
+                        </group>
+                        <group>
+                            <field name="chapter" string="Chapter (Legacy)" help="Use Group field instead"/>
+                            <field name="display_name" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_medical_icd10_search" model="ir.ui.view">
+        <field name="name">medical.icd10.search</field>
+        <field name="model">medical.icd10</field>
+        <field name="arch" type="xml">
+            <search string="Search ICD-10">
+                <field name="code"/>
+                <field name="description"/>
+                <field name="group_id"/>
+                <field name="chapter"/>
+                <separator/>
+                <filter string="With Group" name="with_group" domain="[('group_id', '!=', False)]"/>
+                <filter string="Without Group" name="without_group" domain="[('group_id', '=', False)]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Group" name="group_by_group" context="{'group_by': 'group_id'}"/>
+                    <filter string="Chapter" name="group_by_chapter" context="{'group_by': 'chapter'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        <record id="action_medical_icd10" model="ir.actions.act_window">
+        <field name="name">ICD-10 Codes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.icd10</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_medical_history_tree" model="ir.ui.view">
+        <field name="name">medical.history.tree</field>
+        <field name="model">medical.history</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="date_record"/>
+                <field name="event_date"/>
+                <field name="partner_id"/>
+                <field name="category"/>
+                <field name="name"/>
+                <field name="icd10_id"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_history_form" model="ir.ui.view">
+        <field name="name">medical.history.form</field>
+        <field name="model">medical.history</field>
+        <field name="arch" type="xml">
+            <form string="History">
+                <sheet>
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="active,resolved,chronic,inactive"/>
+                    </header>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="category"/>
+                            <field name="name"/>
+                            <field name="icd10_id" options="{'no_create_edit': True}"/>
+                        </group>
+                        <group>
+                            <field name="date_record"/>
+                            <field name="event_date"/>
+                            <field name="write_uid" readonly="1"/>
+                            <field name="write_date" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="description" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Chatter -->
+                <chatter reload_on_attachment="True"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_medical_history_search" model="ir.ui.view">
+        <field name="name">medical.history.search</field>
+        <field name="model">medical.history</field>
+        <field name="arch" type="xml">
+            <search string="Search History">
+                <field name="partner_id" string="Patient"/>
+                <field name="name" string="Title"/>
+                <filter name="state_active" string="Active" domain="[('state', '=', 'active')]"/>
+                <filter name="state_resolved" string="Resolved" domain="[('state', '=', 'resolved')]"/>
+                <filter name="state_chronic" string="Chronic" domain="[('state', '=', 'chronic')]"/>
+                <filter name="cat_medical" string="Medical" domain="[('category', '=', 'medical')]"/>
+                <filter name="cat_surgical" string="Surgical" domain="[('category', '=', 'surgical')]"/>
+                <filter name="cat_social" string="Social" domain="[('category', '=', 'social')]"/>
+                <filter name="cat_obstetric" string="Obstetric" domain="[('category', '=', 'obstetric')]"/>
+                <filter name="cat_allergy" string="Allergy" domain="[('category', '=', 'allergy')]"/>
+                <filter name="grp_partner" string="By Patient" context="{'group_by': 'partner_id'}"/>
+                <filter name="grp_category" string="By Category" context="{'group_by': 'category'}"/>
+                <filter name="grp_state" string="By State" context="{'group_by': 'state'}"/>
+            </search>
+        </field>
+    </record>
+
+        <record id="action_medical_history" model="ir.actions.act_window">
+        <field name="name">Historias Médicas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.history</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Acción para Pacientes -->
+    <record id="action_medical_patients" model="ir.actions.act_window">
+        <field name="name">Pacientes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_company', '=', False)]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Menú padre Pacientes -->
+    <menuitem id="menu_patients_root" name="Pacientes" parent="menu_medical_root" sequence="20"/>
+    
+    <!-- Pacientes -->
+    <menuitem id="menu_action_medical_patients" name="Pacientes" parent="menu_patients_root" action="action_medical_patients" sequence="10"/>
+    
+    <!-- Antecedentes -->
+    <menuitem id="menu_action_medical_history" name="Antecedentes" parent="menu_patients_root" action="action_medical_history" sequence="20"/>
+    
+    <!-- Menú de configuración -->
+    <menuitem id="menu_medical_configuration" name="Configuration" parent="menu_medical_root" sequence="90"/>
+    
+    <menuitem id="menu_action_medical_icd10" name="ICD-10 Codes" parent="menu_medical_configuration" action="action_medical_icd10" sequence="20"/>
+</odoo>

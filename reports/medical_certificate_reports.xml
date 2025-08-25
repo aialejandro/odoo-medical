@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Private Medical Certificate Report -->
+    <record id="action_report_private_medical_certificate" model="ir.actions.report">
+        <field name="name">Private Medical Certificate</field>
+        <field name="model">medical.consultation</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">odoo_medical.report_private_medical_certificate</field>
+        <field name="report_file">odoo_medical.report_private_medical_certificate</field>
+        <field name="binding_model_id" ref="model_medical_consultation"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_us"/>
+    </record>
+
+    <!-- IESS Medical Certificate Report -->
+    <record id="action_report_iess_medical_certificate" model="ir.actions.report">
+        <field name="name">IESS Medical Certificate</field>
+        <field name="model">medical.consultation</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">odoo_medical.report_iess_medical_certificate</field>
+        <field name="report_file">odoo_medical.report_iess_medical_certificate</field>
+        <field name="binding_model_id" ref="model_medical_consultation"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_us"/>
+    </record>
+
+</odoo>
