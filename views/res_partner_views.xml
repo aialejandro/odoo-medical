@@ -17,15 +17,16 @@
                     </div>
                 </button>
             </xpath>
-            <xpath expr="//notebook" position="inside">
+            <xpath expr="//sheet//notebook/page[1]" position="before">
                 <page string="Medical History">
                     <group>
                         <group>
                             <field name="medical_record_number" readonly="1"/>
                             <field name="age" readonly="1"/>
-                            <field name="weight_kg"/>
+                            <field name="birthdate_date"/>
                         </group>
                         <group>
+                            <field name="weight_kg" autofocus="autofocus"/>
                             <field name="weight_lb"/>
                         </group>
                     </group>
@@ -59,6 +60,26 @@
                         </form>
                     </field>
                 </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_form_inherit_medical_license" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.medical.license</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_contact_birthdate.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='personal_information_group']/field[@name='age']" position="after">
+                <field name="doctor_license"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_form_inherit_medical_license" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.medical.license</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_contact_birthdate.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='personal_information_group']/field[@name='age']" position="after">
+                <field name="doctor_license"/>
             </xpath>
         </field>
     </record>

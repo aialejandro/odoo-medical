@@ -26,14 +26,16 @@
                     <group>
                         <group>
                             <field name="patient_id" options="{'no_create': True}"/>
-                            <field name="birth_date"/>
+                            <field name="birth_date" invisible="1"/>
                             <field name="age" readonly="1"/>
                             <field name="consultation_date"/>
-                            <field name="doctor_id"/>
-                            <field name="doctor_license"/>
+                            <field name="consultation_type"/>
+                            <field name="consultation_reason" placeholder="Describe the reason for this consultation..."/>
+                            <field name="doctor_id" invisible="1"/>
+                            <field name="doctor_license" invisible="1"/>
                         </group>
                         <group>
-                            <field name="consultation_type"/>
+                            
                             <field name="systolic_pressure"/>
                             <field name="diastolic_pressure"/>
                             <field name="weight_kg"/>
@@ -44,10 +46,7 @@
                         </group>
                     </group>
                     <group>
-                        <field name="medical_history_ids" widget="many2many_tags"/>
-                    </group>
-                    <group>
-                        <field name="consultation_reason" placeholder="Describe the reason for this consultation..."/>
+                        <field name="medical_history_ids" />
                     </group>
                     
                     <notebook>
@@ -58,16 +57,6 @@
                             </group>
                             <group>
                                 <field name="treatment_description" placeholder="Describe the treatment..."/>
-                            </group>
-                            <group string="Symptoms and Restrictions">
-                                <field name="has_symptoms"/>
-                                <field name="work_restriction_type"/>
-                                <field name="medical_cause"/>
-                            </group>
-                            <group string="Medical Rest">
-                                <field name="rest_days"/>
-                                <field name="rest_start_date"/>
-                                <field name="rest_end_date"/>
                             </group>
                             <group string="Medical Prescription">
                                 <field name="prescription_line_ids" nolabel="1">
@@ -89,6 +78,18 @@
                             </group>
                             <group>
                                 <field name="next_appointment_date"/>
+                            </group>
+                        </page>
+                        <page string="Medical Certificate" name="medical_certificate">
+                            <group string="Symptoms and Restrictions">
+                                <field name="has_symptoms"/>
+                                <field name="work_restriction_type"/>
+                                <field name="medical_cause"/>
+                            </group>
+                            <group string="Medical Rest">
+                                <field name="rest_days"/>
+                                <field name="rest_start_date"/>
+                                <field name="rest_end_date"/>
                             </group>
                         </page>
                         

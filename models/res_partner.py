@@ -7,6 +7,12 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
 
+    doctor_license = fields.Char(
+        string='Doctor License Number',
+        tracking=True,
+        help="License number associated with the doctor"
+    )
+
     # Historia Clínica Secuencial
     medical_record_number = fields.Char(
         string='Medical Record Number',

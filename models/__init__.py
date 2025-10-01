@@ -13,5 +13,6 @@ from . import medical_therapy
 from . import medical_xray_area
 from . import medical_xray_order_line
 from . import medical_xray_order
+from . import res_users
 
 

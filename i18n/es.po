@@ -16,6 +16,406 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_xray_root
+msgid "X-ray Management"
+msgstr "Gestión de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_xray_orders
+msgid "X-ray Orders"
+msgstr "Órdenes de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.ui.menu,name:odoo_medical.menu_medical_xray_areas
+msgid "X-ray Areas"
+msgstr "Áreas de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_xray_order
+msgid "X-ray Order"
+msgstr "Orden de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_xray_order_line
+msgid "X-ray Order Line"
+msgstr "Línea de Orden de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model,name:odoo_medical.model_medical_xray_area
+msgid "X-ray Area"
+msgstr "Área de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__name
+msgid "Order Number"
+msgstr "Número de Orden"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__state
+msgid "State"
+msgstr "Estado"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order__state__in_progress
+msgid "In Progress"
+msgstr "En Progreso"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order__state__done
+msgid "Done"
+msgstr "Realizado"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__patient_id
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__patient_id
+msgid "Patient for whom the X-ray is ordered"
+msgstr "Paciente para quien se solicitan Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__date
+msgid "Order Date"
+msgstr "Fecha de la Orden"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__date
+msgid "Date when the X-ray order was created"
+msgstr "Fecha en que se creó la orden de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__line_ids
+msgid "X-ray Lines"
+msgstr "Líneas de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__line_ids
+msgid "List of X-rays to be taken"
+msgstr "Lista de Rayos X a realizar"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__total_price
+msgid "Total Price"
+msgstr "Precio Total"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__journal_id
+msgid "Journal for invoice creation"
+msgstr "Diario para la creación de la factura"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__product_id
+msgid "Product for invoice creation"
+msgstr "Producto para la creación de la factura"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__tax_id
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__tax_id
+msgid "Tax for invoice creation"
+msgstr "Impuesto para la creación de la factura"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__invoice_id
+msgid "Generated invoice"
+msgstr "Factura generada"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__invoice_state
+msgid "Invoice Status"
+msgstr "Estado de la Factura"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order__notes
+msgid "Additional notes for the X-ray order"
+msgstr "Notas adicionales para la orden de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Cannot confirm an order without X-ray lines."
+msgstr "No se puede confirmar una orden sin líneas de Rayos X."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Only confirmed orders can be started."
+msgstr "Solo se pueden iniciar órdenes confirmadas."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Only orders in progress can be marked as done."
+msgstr "Solo las órdenes en progreso pueden marcarse como realizadas."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Cannot cancel an order with a posted invoice."
+msgstr "No se puede cancelar una orden con una factura contabilizada."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Invoice already exists for this order."
+msgstr "Ya existe una factura para esta orden."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "You can only create invoices for completed orders."
+msgstr "Solo puede crear facturas para órdenes completadas."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Please configure the default X-ray journal in settings."
+msgstr "Configure el diario predeterminado de Rayos X en los ajustes."
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order.py:0
+msgid "Please configure the default X-ray product in settings."
+msgstr "Configure el producto predeterminado de Rayos X en los ajustes."
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order_line__sequence
+msgid "Sequence for ordering the lines"
+msgstr "Secuencia para ordenar las líneas"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__xray_order_id
+msgid "X-ray Order"
+msgstr "Orden de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__area_id
+msgid "X-ray Area"
+msgstr "Área de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order_line__area_id
+msgid "Body area to be X-rayed"
+msgstr "Zona del cuerpo a radiografiar"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order_line__projection_type__ap
+msgid "Anteroposterior (AP)"
+msgstr "Anteroposterior (AP)"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order_line__projection_type__pa
+msgid "Posteroanterior (PA)"
+msgstr "Posteroanterior (PA)"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order_line__projection_type__lateral
+msgid "Lateral"
+msgstr "Lateral"
+
+#. module: odoo_medical
+#: model:ir.model.fields.selection,name:odoo_medical.selection__medical_xray_order_line__projection_type__oblique
+msgid "Oblique"
+msgstr "Oblicua"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__projection_type
+msgid "Projection Type"
+msgstr "Tipo de Proyección"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order_line__projection_type
+msgid "Type of X-ray projection"
+msgstr "Tipo de proyección de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__price
+msgid "Price"
+msgstr "Precio"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order_line__price
+msgid "Price for this X-ray"
+msgstr "Precio de esta radiografía"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__images
+msgid "X-ray Images"
+msgstr "Imágenes de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_order_line__images
+msgid "Upload X-ray images for this line"
+msgstr "Cargue imágenes de Rayos X para esta línea"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_order_line__image_count
+msgid "Number of Images"
+msgstr "Número de Imágenes"
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order_line.py:0
+msgid "X-ray Line"
+msgstr "Línea de Rayos X"
+
+#. module: odoo_medical
+#: code:addons/odoo_medical/models/medical_xray_order_line.py:0
+msgid "Price cannot be negative"
+msgstr "El precio no puede ser negativo"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_area__name
+msgid "Area Name"
+msgstr "Nombre del Área"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_area__name
+msgid "Name of the X-ray area (e.g., Chest, Spine, Abdomen)"
+msgstr "Nombre del área de Rayos X (p. ej., Tórax, Columna, Abdomen)"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_area__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_area__active
+msgid "If unchecked, it will allow you to hide the area without removing it"
+msgstr "Si se desmarca, permitirá ocultar el área sin eliminarla"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_xray_area__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_medical_xray_area__description
+msgid "Additional information about the X-ray area"
+msgstr "Información adicional sobre el área de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_product_id
+msgid "Default Consultation Item"
+msgstr "Producto predeterminado de consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_tax_id
+msgid "Default Consultation Tax"
+msgstr "Impuesto predeterminado de consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_journal_id
+msgid "Default Consultation Journal"
+msgstr "Diario predeterminado de consulta"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_therapy_product_id
+msgid "Default Therapy Product"
+msgstr "Producto predeterminado de terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_config_settings__medical_default_therapy_product_id
+msgid "Default product for therapy invoicing"
+msgstr "Producto predeterminado para la facturación de terapias"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_therapy_tax_id
+msgid "Default Therapy Tax"
+msgstr "Impuesto predeterminado de terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_config_settings__medical_default_therapy_tax_id
+msgid "Default tax for therapy invoicing"
+msgstr "Impuesto predeterminado para la facturación de terapias"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_therapy_journal_id
+msgid "Default Therapy Journal"
+msgstr "Diario predeterminado de terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_config_settings__medical_default_therapy_journal_id
+msgid "Default journal for therapy invoicing"
+msgstr "Diario predeterminado para la facturación de terapias"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_xray_product_id
+msgid "Default X-ray Product"
+msgstr "Producto predeterminado de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_config_settings__medical_default_xray_product_id
+msgid "Default product for X-ray invoicing"
+msgstr "Producto predeterminado para la facturación de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_xray_tax_id
+msgid "Default X-ray Tax"
+msgstr "Impuesto predeterminado de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_config_settings__medical_default_xray_tax_id
+msgid "Default tax for X-ray invoicing"
+msgstr "Impuesto predeterminado para la facturación de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_xray_journal_id
+msgid "Default X-ray Journal"
+msgstr "Diario predeterminado de Rayos X"
+
+#. module: odoo_medical
+#: model:ir.model.fields,help:odoo_medical.field_res_config_settings__medical_default_xray_journal_id
+msgid "Default journal for X-ray invoicing"
+msgstr "Diario predeterminado para la facturación de Rayos X"
+
+#. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
 msgid "<i class=\"fa fa-clock-o\"/> Next:"
 msgstr "<i class=\"fa fa-clock-o\"/> Próxima:"
@@ -434,7 +834,6 @@ msgid "Concentration Unit"
 msgstr "Unidad de la Concentración"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Concentration must be greater than zero."
 msgstr "La concentración debe ser mayor que cero."
@@ -483,7 +882,6 @@ msgid "Consultation Fee"
 msgstr "Valor de Consulta"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Consultation Invoice"
 msgstr "Factura de Consulta"
@@ -665,56 +1063,87 @@ msgstr "Fecha cuando está programada la terapia"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__start_date
 msgid "Date when therapy sessions actually started"
-msgstr ""
+msgstr "Fecha en que las sesiones de terapia realmente comenzaron"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__end_date
 msgid "Date when therapy sessions ended"
-msgstr ""
+msgstr "Fecha en que finalizaron las sesiones de terapia"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_product_id
 #: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_product_id
 msgid "Default Consultation Item"
-msgstr ""
+msgstr "Producto de Consulta Predeterminado"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_journal_id
 #: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_journal_id
 msgid "Default Consultation Journal"
-msgstr ""
+msgstr "Diario de Consulta Predeterminado"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__consultation_tax_id
 #: model:ir.model.fields,field_description:odoo_medical.field_res_config_settings__medical_default_consultation_tax_id
 msgid "Default Consultation Tax"
-msgstr ""
+msgstr "Impuesto de Consulta Predeterminado"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
 msgid "Default Medical Consultation Parameters"
-msgstr ""
+msgstr "Parámetros Predeterminados de Consulta Médica"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Medical Therapies"
+msgstr "Terapias Médicas"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Default Medical Therapy Parameters"
+msgstr "Parámetros Predeterminados de Terapia Médica"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Configure default parameters for medical therapies"
+msgstr "Configurar parámetros predeterminados para terapias médicas"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "X-ray Services"
+msgstr "Servicios de Rayos X"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Default X-ray Parameters"
+msgstr "Parámetros Predeterminados de Rayos X"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.res_config_settings_view_form_medical
+msgid "Configure default parameters for X-ray services"
+msgstr "Configurar parámetros predeterminados para servicios de Rayos X"
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment_component
 msgid "Define individual components that make up treatment sessions."
-msgstr ""
+msgstr "Defina los componentes individuales que conforman las sesiones de tratamiento."
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment_session
 msgid "Define sessions that compose medical treatments."
-msgstr ""
+msgstr "Defina las sesiones que componen los tratamientos médicos."
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_affected_apparatus
 msgid ""
 "Define the apparatus that can be affected and require therapy treatment."
 msgstr ""
+"Defina los aparatos que pueden verse afectados y requieren tratamiento de terapia."
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
 msgid "Define treatment objectives..."
-msgstr ""
+msgstr "Defina los objetivos del tratamiento..."
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_treatment
@@ -722,6 +1151,7 @@ msgid ""
 "Define treatment protocols with sessions and components for therapy "
 "management."
 msgstr ""
+"Defina protocolos de tratamiento con sesiones y componentes para la gestión de la terapia."
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_kanban
@@ -731,17 +1161,17 @@ msgstr "Eliminar"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Describe the patient's evolution..."
-msgstr ""
+msgstr "Describa la evolución del paciente..."
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Describe the reason for this consultation..."
-msgstr ""
+msgstr "Describa el motivo de esta consulta..."
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Describe the treatment..."
-msgstr ""
+msgstr "Describa el tratamiento..."
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__description
@@ -760,17 +1190,17 @@ msgstr "Descripción"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__description
 msgid "Description of the session objectives and procedures"
-msgstr ""
+msgstr "Descripción de los objetivos y procedimientos de la sesión"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__description
 msgid "Detailed description of the component"
-msgstr ""
+msgstr "Descripción detallada del componente"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__description
 msgid "Detailed description of the treatment"
-msgstr ""
+msgstr "Descripción detallada del tratamiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__diagnosis
@@ -800,7 +1230,6 @@ msgid "Discount (%)"
 msgstr "Descuento (%)"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Discount percentage must be between 0 and 100."
 msgstr "El porcentaje de descuento debe estar entre 0 y 100."
@@ -881,7 +1310,7 @@ msgstr "Hora de Fin"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__rest_end_date
 msgid "End date of medical rest"
-msgstr ""
+msgstr "Fecha de fin del reposo médico"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A07_9
@@ -1004,7 +1433,7 @@ msgstr "Fecha y Hora de Salida"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__duration_minutes
 msgid "Expected duration in minutes for this component"
-msgstr ""
+msgstr "Duración prevista en minutos para este componente"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_A9
@@ -1015,7 +1444,7 @@ msgstr ""
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01_0
 msgid "Fiebre tifoidea"
-msgstr ""
+msgstr "Fiebre tifoidea"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01_02
@@ -1025,40 +1454,40 @@ msgstr "Fiebre tifoidea con afectación cardiaca"
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01_00
 msgid "Fiebre tifoidea, no especificada"
-msgstr ""
+msgstr "Fiebre tifoidea, no especificada"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01
 msgid "Fiebres tifoidea y paratifoidea"
-msgstr ""
+msgstr "Fiebres tifoidea y paratifoidea"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_A9
 msgid "Fiebres virales transmitidas por vectores (A90-A99)"
-msgstr ""
+msgstr "Fiebres virales transmitidas por vectores (A90-A99)"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Finish Consultation"
-msgstr ""
+msgstr "Finalizar Consulta"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__state__finished
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Finished"
-msgstr ""
+msgstr "Finalizada"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__first_time
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "First Time"
-msgstr ""
+msgstr "Primera Vez"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__follow_up
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Follow-up"
-msgstr ""
+msgstr "Seguimiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_follower_ids
@@ -1072,19 +1501,19 @@ msgstr "Seguidores"
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_partner_ids
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Seguidores (Contactos)"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__activity_type_icon
 #: model:ir.model.fields,help:odoo_medical.field_medical_history__activity_type_icon
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr ""
+msgstr "Ícono de Font Awesome p.ej. fa-tasks"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A09
 msgid "Gastroenteritis y colitis infecciosas, no especificadas"
-msgstr ""
+msgstr "Gastroenteritis y colitis infecciosas, no especificadas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A08_11
@@ -1107,22 +1536,22 @@ msgstr "Gastroenteropatía aguda por otros virus pequeños redondos"
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__general_illness
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "General Illness"
-msgstr ""
+msgstr "Enfermedad general"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__notes
 msgid "General notes about the therapy"
-msgstr ""
+msgstr "Notas generales sobre la terapia"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
 msgid "General therapy notes..."
-msgstr ""
+msgstr "Notas generales de la terapia..."
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A07_1
 msgid "Giardiasis [lambliasis]"
-msgstr ""
+msgstr "Giardiasis [lambliasis]"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_search
@@ -1142,22 +1571,22 @@ msgstr "Agrupar Por"
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__code
 msgid "Group Code"
-msgstr ""
+msgstr "Código del Grupo"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__name
 msgid "Group Name"
-msgstr ""
+msgstr "Nombre del Grupo"
 
 #. module: odoo_medical
 #: model:ir.model.constraint,message:odoo_medical.constraint_medical_icd10_group_code_unique
 msgid "Group code must be unique."
-msgstr ""
+msgstr "El código del grupo debe ser único."
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_icd10_group_form
 msgid "Group description..."
-msgstr ""
+msgstr "Descripción del grupo..."
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__obstetric
@@ -1167,7 +1596,7 @@ msgstr "Gineco-Obstétrico"
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_B15
 msgid "HEPATITIS VIRAL"
-msgstr ""
+msgstr "HEPATITIS VIRAL"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__has_message
@@ -1180,12 +1609,12 @@ msgstr "Tiene Mensaje"
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__has_symptoms
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Has Symptoms"
-msgstr ""
+msgstr "Tiene síntomas"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_B15
 msgid "Hepatitis causada por virus (B15-B19)"
-msgstr ""
+msgstr "Hepatitis causada por virus (B15-B19)"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_form
@@ -1199,18 +1628,16 @@ msgid "History Title"
 msgstr "Título del Antecedente"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_history.py:0
 msgid "History created"
-msgstr ""
+msgstr "Antecedente creado"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_history.py:0
 msgid ""
 "History entries cannot be deleted. Set status to \"Inactive\" or "
 "\"Resolved\" instead."
-msgstr ""
+msgstr "No se pueden eliminar los antecedentes. En su lugar, establezca el estado en \"Inactivo\" o \"Resuelto\"."
 
 #. module: odoo_medical
 #: model:ir.actions.act_window,name:odoo_medical.action_medical_icd10
@@ -1249,7 +1676,7 @@ msgstr "Grupos CIE-10"
 #. module: odoo_medical
 #: model:ir.model.constraint,message:odoo_medical.constraint_medical_icd10_code_unique
 msgid "ICD-10 code must be unique."
-msgstr ""
+msgstr "El código CIE-10 debe ser único."
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_icd10
@@ -1257,6 +1684,8 @@ msgid ""
 "ICD-10 codes are international medical classification codes.\n"
 "                You can organize them by groups for better management."
 msgstr ""
+"Los códigos CIE-10 son clasificaciones médicas internacionales.\n"
+"                Puede organizarlos por grupos para una mejor gestión."
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_icd10_group
@@ -1264,6 +1693,8 @@ msgid ""
 "ICD-10 groups help organize medical codes into logical categories.\n"
 "                You can create hierarchical groups with parent-child relationships."
 msgstr ""
+"Los grupos CIE-10 ayudan a organizar los códigos médicos en categorías lógicas.\n"
+"                Puede crear grupos jerárquicos con relaciones padre-hijo."
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__id
@@ -1291,37 +1722,39 @@ msgid ""
 "INFECCIONES VIRALES CARACTERIZADAS POR LESIONES DE PIEL Y DE LAS MEMBRANAS "
 "MUCOSAS"
 msgstr ""
+"INFECCIONES VIRALES CARACTERIZADAS POR LESIONES DE PIEL Y DE LAS MEMBRANAS "
+"MUCOSAS"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_A8
 msgid "INFECCIONES VIRALES Y POR PRIONES DEL SISTEMA NERVIOSO CENTRAL"
-msgstr ""
+msgstr "INFECCIONES VIRALES Y POR PRIONES DEL SISTEMA NERVIOSO CENTRAL"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__concentration_unit__iu
 msgid "IU"
-msgstr ""
+msgstr "UI"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_exception_icon
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__activity_exception_icon
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Icono"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__activity_exception_icon
 #: model:ir.model.fields,help:odoo_medical.field_medical_history__activity_exception_icon
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "Icono para indicar una actividad con excepción."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_needaction
 #: model:ir.model.fields,help:odoo_medical.field_medical_history__message_needaction
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_has_error
@@ -1331,7 +1764,7 @@ msgstr ""
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_has_error
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_history__event_date
@@ -1351,17 +1784,17 @@ msgstr "En Progreso"
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__state__inactive
 msgid "Inactive"
-msgstr ""
+msgstr "Inactivo"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__has_symptoms
 msgid "Indicates if the patient presents symptoms"
-msgstr ""
+msgstr "Indica si el paciente presenta síntomas"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_A1
 msgid "Infecciones causadas por Mycobacterium tuberculosis (A15-A19)"
-msgstr ""
+msgstr "Infecciones causadas por Mycobacterium tuberculosis (A15-A19)"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_A5
@@ -1373,31 +1806,32 @@ msgstr "Infecciones de transmisión sexual (A50-A64)"
 msgid ""
 "Infecciones intestinales debidas a virus y otros organismos especificados"
 msgstr ""
+"Infecciones intestinales debidas a virus y otros organismos especificados"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02_2
 msgid "Infecciones localizadas debidas a Salmonella"
-msgstr ""
+msgstr "Infecciones localizadas debidas a Salmonella"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02_20
 msgid "Infecciones localizadas debidas a Salmonella, no especificadas"
-msgstr ""
+msgstr "Infecciones localizadas debidas a Salmonella, no especificadas"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_A7
 msgid "Infecciones por Chlamydia (A70-A74)"
-msgstr ""
+msgstr "Infecciones por Chlamydia (A70-A74)"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_B0
 msgid "Infecciones virales de la piel y mucosas (B00-B09)"
-msgstr ""
+msgstr "Infecciones virales de la piel y mucosas (B00-B09)"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_A8
 msgid "Infecciones virales del sistema nervioso central (A80-A89)"
-msgstr ""
+msgstr "Infecciones virales del sistema nervioso central (A80-A89)"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A06_8
@@ -1458,19 +1892,19 @@ msgstr "Instrucciones"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_prescription_line_form
 msgid "Instructions for use..."
-msgstr ""
+msgstr "Instrucciones de uso..."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__code
 msgid "Internal code for the treatment"
-msgstr ""
+msgstr "Código interno del tratamiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__cie10_code
 msgid ""
 "International Classification of Diseases 10th Revision code for the "
 "diagnosis"
-msgstr ""
+msgstr "Código CIE-10 para el diagnóstico"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A05_9
@@ -1488,6 +1922,8 @@ msgid ""
 "Intoxicación alimentaria debida a Clostridium perfringens [Clostridium "
 "welchii]"
 msgstr ""
+"Intoxicación alimentaria debida a Clostridium perfringens [Clostridium "
+"welchii]"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A05_3
@@ -1514,28 +1950,28 @@ msgstr "Intoxicación alimentaria estafilocócica"
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_is_follower
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "Es seguidor"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_res_partner__is_patient
 #: model:ir.model.fields,field_description:odoo_medical.field_res_users__is_patient
 msgid "Is Patient"
-msgstr ""
+msgstr "Es paciente"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__isolation
 msgid "Isolation"
-msgstr ""
+msgstr "Aislamiento"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Isolation Required"
-msgstr ""
+msgstr "Requiere aislamiento"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A07_3
 msgid "Isosporiasis"
-msgstr ""
+msgstr "Isosporiasis"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__write_uid
@@ -1550,7 +1986,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__write_uid
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización por"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__write_date
@@ -1565,17 +2001,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_component__write_date
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment_session__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última actualización el"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
 msgid "List contraindications..."
-msgstr ""
+msgstr "Enumere las contraindicaciones..."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__objectives
 msgid "Main objectives of this treatment"
-msgstr ""
+msgstr "Objetivos principales de este tratamiento"
 
 #. module: odoo_medical
 #: model_terms:ir.actions.act_window,help:odoo_medical.action_medical_therapy
@@ -1583,12 +2019,14 @@ msgid ""
 "Manage therapy treatments for patients with structured session tracking and "
 "progress monitoring."
 msgstr ""
+"Gestione tratamientos terapéuticos para pacientes con seguimiento estructurado "
+"de sesiones y monitoreo del progreso."
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__medical_cause__maternity
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Maternity"
-msgstr ""
+msgstr "Maternidad"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__medical
@@ -1607,7 +2045,7 @@ msgstr "Aparato Afecto Médico"
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__medical_cause
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Medical Cause"
-msgstr ""
+msgstr "Causa Médica"
 
 #. module: odoo_medical
 #: model:ir.model,name:odoo_medical.model_medical_consultation
@@ -1634,17 +2072,17 @@ msgstr "Historial Médico"
 #. module: odoo_medical
 #: model:res.groups,name:odoo_medical.group_medical_history_manager
 msgid "Medical History Manager"
-msgstr ""
+msgstr "Administrador del Historial Médico"
 
 #. module: odoo_medical
 #: model:res.groups,name:odoo_medical.group_medical_history_user
 msgid "Medical History User"
-msgstr ""
+msgstr "Usuario del Historial Médico"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Medical Information"
-msgstr ""
+msgstr "Información Médica"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__prescription_line_ids
@@ -1661,12 +2099,12 @@ msgstr "Línea de Prescripción Médica"
 #: model:ir.model.fields,field_description:odoo_medical.field_res_partner__medical_record_number
 #: model:ir.model.fields,field_description:odoo_medical.field_res_users__medical_record_number
 msgid "Medical Record Number"
-msgstr ""
+msgstr "Número de historia clínica"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Medical Rest"
-msgstr ""
+msgstr "Reposo Médico"
 
 #. module: odoo_medical
 #: model:ir.model,name:odoo_medical.model_medical_session_record
@@ -1712,21 +2150,23 @@ msgid ""
 "Medical consultations help you track patient visits, diagnoses, treatments, "
 "and prescriptions."
 msgstr ""
+"Las consultas médicas le ayudan a seguir las visitas de los pacientes, "
+"diagnósticos, tratamientos y prescripciones."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__contraindications
 msgid "Medical contraindications for this treatment"
-msgstr ""
+msgstr "Contraindicaciones médicas para este tratamiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__diagnosis
 msgid "Medical diagnosis related to this therapy"
-msgstr ""
+msgstr "Diagnóstico médico relacionado con esta terapia"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
 msgid "Medical diagnosis..."
-msgstr ""
+msgstr "Diagnóstico médico..."
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__medication_name
@@ -1736,19 +2176,19 @@ msgstr "Nombre del Medicamento"
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02_21
 msgid "Meningitis por Salmonella"
-msgstr ""
+msgstr "Meningitis por Salmonella"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01_01
 msgid "Meningitis tifoidea"
-msgstr ""
+msgstr "Meningitis tifoidea"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_has_error
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__message_has_error
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "Error de entrega de mensajes"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_ids
@@ -1762,27 +2202,27 @@ msgstr "Mensajes"
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__my_activity_date_deadline
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr ""
+msgstr "Fecha límite de mi actividad"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__name
 msgid "Name of the affected apparatus"
-msgstr ""
+msgstr "Nombre del aparato afectado"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__name
 msgid "Name of the medical treatment"
-msgstr ""
+msgstr "Nombre del tratamiento médico"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__name
 msgid "Name of the treatment component"
-msgstr ""
+msgstr "Nombre del componente del tratamiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__name
 msgid "Name of the treatment session"
-msgstr ""
+msgstr "Nombre de la sesión de tratamiento"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01_03
@@ -1790,7 +2230,6 @@ msgid "Neumonía tifoidea"
 msgstr "Neumonía tifoidea"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "New"
 msgstr "Nuevo"
@@ -1799,7 +2238,7 @@ msgstr "Nuevo"
 #: model:ir.actions.act_window,name:odoo_medical.action_new_medical_consultation
 #: model:ir.ui.menu,name:odoo_medical.menu_new_medical_consultation
 msgid "New Consultation"
-msgstr ""
+msgstr "Nueva Consulta"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_date_deadline
@@ -1831,7 +2270,7 @@ msgstr "Fecha de Próxima Cita"
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__none
 msgid "None"
-msgstr ""
+msgstr "Ninguno"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__description
@@ -1849,12 +2288,12 @@ msgstr "Número de Acciones"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__completed_sessions
 msgid "Number of completed sessions"
-msgstr ""
+msgstr "Número de sesiones completadas"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_session__component_count
 msgid "Number of components in this session"
-msgstr ""
+msgstr "Número de componentes en esta sesión"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_has_error_counter
@@ -1868,7 +2307,7 @@ msgstr "Número de errores"
 #: model:ir.model.fields,help:odoo_medical.field_medical_history__message_needaction_counter
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr ""
+msgstr "Número de mensajes que requieren acción"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__message_has_error_counter
@@ -1880,47 +2319,47 @@ msgstr "Número de mensajes con error de entrega"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__rest_days
 msgid "Number of rest days prescribed"
-msgstr ""
+msgstr "Número de días de reposo prescritos"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__session_count
 msgid "Number of sessions in this treatment"
-msgstr ""
+msgstr "Número de sesiones en este tratamiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_affected_apparatus__therapy_count
 msgid "Number of therapies using this apparatus"
-msgstr ""
+msgstr "Número de terapias que usan este aparato"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__therapy_count
 msgid "Number of therapies using this treatment"
-msgstr ""
+msgstr "Número de terapias que usan este tratamiento"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_A3
 msgid "OTRAS ENFERMEDADES BACTERIANAS"
-msgstr ""
+msgstr "OTRAS ENFERMEDADES BACTERIANAS"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_A7
 msgid "OTRAS ENFERMEDADES CAUSADAS POR CLAMIDIAS"
-msgstr ""
+msgstr "OTRAS ENFERMEDADES CAUSADAS POR CLAMIDIAS"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_A6
 msgid "OTRAS ENFERMEDADES DEBIDAS A ESPIROQUETAS"
-msgstr ""
+msgstr "OTRAS ENFERMEDADES DEBIDAS A ESPIROQUETAS"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,name:odoo_medical.icd10_group_B1
 msgid "OTROS HERPESVIRUS HUMANOS"
-msgstr ""
+msgstr "OTROS HERPESVIRUS HUMANOS"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
 msgid "Objectives"
-msgstr ""
+msgstr "Objetivos"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__observations
@@ -1932,7 +2371,7 @@ msgstr "Observaciones"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
 msgid "Obstetric"
-msgstr ""
+msgstr "Obstétrico"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__ointment
@@ -1947,78 +2386,78 @@ msgstr "Capítulo o grupo ICD-10 opcional"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_icd10_group__code
 msgid "Optional code for the group (e.g., A00-B99)"
-msgstr ""
+msgstr "Código opcional para el grupo (p. ej., A00-B99)"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02_24
 msgid "Osteomielitis por Salmonella"
-msgstr ""
+msgstr "Osteomielitis por Salmonella"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A01_05
 msgid "Osteomielitis tifoidea"
-msgstr ""
+msgstr "Osteomielitis tifoidea"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_A3
 msgid "Otras enfermedades causadas por bacterias (A30-A49)"
-msgstr ""
+msgstr "Otras enfermedades causadas por bacterias (A30-A49)"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A07
 msgid "Otras enfermedades intestinales debidas a protozoos"
-msgstr ""
+msgstr "Otras enfermedades intestinales debidas a protozoos"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A07_8
 msgid "Otras enfermedades intestinales especificadas debidas a protozoos"
-msgstr ""
+msgstr "Otras enfermedades intestinales especificadas debidas a protozoos"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A08_3
 #: model:medical.icd10,description:odoo_medical.icd10_A08_39
 msgid "Otras enteritis virales"
-msgstr ""
+msgstr "Otras enteritis virales"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A06_89
 msgid "Otras infecciones amebianas"
-msgstr ""
+msgstr "Otras infecciones amebianas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02
 msgid "Otras infecciones debidas a Salmonella"
-msgstr ""
+msgstr "Otras infecciones debidas a Salmonella"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02_8
 msgid "Otras infecciones especificadas debidas a Salmonella"
-msgstr ""
+msgstr "Otras infecciones especificadas debidas a Salmonella"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A06_82
 msgid "Otras infecciones genitourinarias amebianas"
-msgstr ""
+msgstr "Otras infecciones genitourinarias amebianas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A04
 msgid "Otras infecciones intestinales bacterianas"
-msgstr ""
+msgstr "Otras infecciones intestinales bacterianas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A04_8
 msgid "Otras infecciones intestinales bacterianas especificadas"
-msgstr ""
+msgstr "Otras infecciones intestinales bacterianas especificadas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A04_4
 msgid "Otras infecciones intestinales debidas a Escherichia coli"
-msgstr ""
+msgstr "Otras infecciones intestinales debidas a Escherichia coli"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A08_8
 msgid "Otras infecciones intestinales especificadas"
-msgstr ""
+msgstr "Otras infecciones intestinales especificadas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A05
@@ -2026,33 +2465,35 @@ msgid ""
 "Otras intoxicaciones alimentarias bacterianas, no clasificadas bajo otro "
 "concepto"
 msgstr ""
+"Otras intoxicaciones alimentarias bacterianas, no clasificadas bajo otro "
+"concepto"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A05_8
 msgid "Otras intoxicaciones alimentarias debidas a bacterias especificadas"
-msgstr ""
+msgstr "Otras intoxicaciones alimentarias debidas a bacterias especificadas"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A03_8
 msgid "Otras shigelosis"
-msgstr ""
+msgstr "Otras shigelosis"
 
 #. module: odoo_medical
 #: model:medical.icd10.group,description:odoo_medical.icd10_group_B1
 msgid "Otros virus del herpes humano (B10)"
-msgstr ""
+msgstr "Otros virus del herpes humano (B10)"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Overdue Appointments"
-msgstr ""
+msgstr "Citas vencidas"
 
 #. module: odoo_medical
 #: model:ir.actions.act_window,name:odoo_medical.action_medical_patients
 #: model:ir.ui.menu,name:odoo_medical.menu_action_medical_patients
 #: model:ir.ui.menu,name:odoo_medical.menu_patients_root
 msgid "Pacientes"
-msgstr ""
+msgstr "Pacientes"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__parent_id
@@ -2063,7 +2504,7 @@ msgstr "Grupo Padre"
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_icd10_group__parent_path
 msgid "Parent Path"
-msgstr ""
+msgstr "Ruta padre"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__medical_history_ids
@@ -2092,28 +2533,28 @@ msgstr "Entrada del Antecedente del Paciente"
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__patient_vat
 msgid "Patient VAT"
-msgstr ""
+msgstr "Identificación del Paciente"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_session_record__evolution
 msgid "Patient evolution during this session"
-msgstr ""
+msgstr "Evolución del paciente durante esta sesión"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_session_record__patient_id
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__patient_id
 msgid "Patient receiving the therapy"
-msgstr ""
+msgstr "Paciente que recibe la terapia"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Payment Information"
-msgstr ""
+msgstr "Información de Pago"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__progress_percentage
 msgid "Percentage of completed sessions"
-msgstr ""
+msgstr "Porcentaje de sesiones completadas"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_prescription_line__pharmaceutical_form
@@ -2123,12 +2564,12 @@ msgstr "Forma Farmacéutica"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_search
 msgid "Physician"
-msgstr ""
+msgstr "Médico"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__attending_physician_id
 msgid "Physician responsible for this therapy"
-msgstr ""
+msgstr "Médico responsable de esta terapia"
 
 #. module: odoo_medical
 #: model:medical.icd10,description:odoo_medical.icd10_A02_25
@@ -2143,12 +2584,12 @@ msgstr "Posología"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Post-operative"
-msgstr ""
+msgstr "Postoperatorio"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__post_operative
 msgid "Post-operative Control"
-msgstr ""
+msgstr "Control Postoperatorio"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__powder
@@ -2158,12 +2599,12 @@ msgstr "Polvo"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_prescription_line_form
 msgid "Prescription Line"
-msgstr ""
+msgstr "Línea de Prescripción"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
 msgid "Progress %"
-msgstr ""
+msgstr "Progreso %"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__progress_percentage
@@ -2176,7 +2617,6 @@ msgid "Quantity to Dispense"
 msgstr "Cantidad a Dispensar"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Quantity to dispense must be greater than zero."
 msgstr "La cantidad a dispensar debe ser mayor que cero."
@@ -2199,17 +2639,17 @@ msgstr "Nombre del Registro"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_therapy__session_record_ids
 msgid "Records of therapy sessions"
-msgstr ""
+msgstr "Registros de las sesiones de terapia"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Reference"
-msgstr ""
+msgstr "Referencia"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_session_record__session_id
 msgid "Reference to the treatment session template"
-msgstr ""
+msgstr "Referencia a la plantilla de la sesión de tratamiento"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_affected_apparatus__therapy_ids
@@ -2217,23 +2657,23 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_affected_apparatus_form
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_form
 msgid "Related Therapies"
-msgstr ""
+msgstr "Terapias Relacionadas"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_session_record__therapy_id
 msgid "Related therapy"
-msgstr ""
+msgstr "Terapia relacionada"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
 msgid "Reset to Draft"
-msgstr ""
+msgstr "Restablecer a Borrador"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__state__resolved
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
 msgid "Resolved"
-msgstr ""
+msgstr "Resuelto"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__activity_user_id
@@ -2245,29 +2685,27 @@ msgstr ""
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__rest_days
 msgid "Rest Days"
-msgstr ""
+msgstr "Días de Reposo"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__rest_end_date
 msgid "Rest End Date"
-msgstr ""
+msgstr "Fecha de Fin del Reposo"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__rest_start_date
 msgid "Rest Start Date"
-msgstr ""
+msgstr "Fecha de Inicio del Reposo"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Rest days must be a positive number."
-msgstr ""
+msgstr "Los días de reposo deben ser un número positivo."
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Rest start date must be before rest end date."
-msgstr ""
+msgstr "La fecha de inicio del reposo debe ser anterior a la fecha de fin."
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__message_has_sms_error
@@ -2310,7 +2748,7 @@ msgstr ""
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Search Medical Consultations"
-msgstr ""
+msgstr "Buscar Consultas Médicas"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_history__icd10_id
@@ -2362,12 +2800,12 @@ msgstr "Registros de Sesión"
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__session_sequence
 msgid "Session Sequence"
-msgstr ""
+msgstr "Secuencia de la Sesión"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_treatment_session_form
 msgid "Session name..."
-msgstr ""
+msgstr "Nombre de la sesión..."
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment_component__session_id
@@ -2382,7 +2820,7 @@ msgstr "Sesiones"
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_treatment__session_count
 msgid "Sessions Count"
-msgstr ""
+msgstr "Conteo de Sesiones"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_treatment__session_ids
@@ -2463,7 +2901,7 @@ msgstr "Aerosol"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Start Consultation"
-msgstr ""
+msgstr "Iniciar Consulta"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__start_date
@@ -2473,7 +2911,7 @@ msgstr "Fecha de Inicio"
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_therapy_form
 msgid "Start Therapy"
-msgstr ""
+msgstr "Iniciar Terapia"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__start_datetime
@@ -2483,7 +2921,37 @@ msgstr "Hora de Inicio"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__rest_start_date
 msgid "Start date of medical rest"
-msgstr ""
+msgstr "Fecha de inicio del reposo médico"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_consultation__doctor_license
+msgid "Doctor License Number"
+msgstr "Número de Licencia del Médico"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__price
+msgid "Therapy Price"
+msgstr "Precio de la Terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__therapy_product_id
+msgid "Therapy Product"
+msgstr "Producto de Terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__therapy_tax_id
+msgid "Therapy Tax"
+msgstr "Impuesto de Terapia"
+
+#. module: odoo_medical
+#: model:ir.model.fields,field_description:odoo_medical.field_medical_therapy__therapy_journal_id
+msgid "Therapy Journal"
+msgstr "Diario de Terapia"
+
+#. module: odoo_medical
+#: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_xray_order_form
+msgid "Invoice Settings"
+msgstr "Ajustes de Facturación"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_session_record__state
@@ -2496,7 +2964,7 @@ msgstr "Estado"
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_session_record__state
 msgid "State of the session record"
-msgstr ""
+msgstr "Estado del registro de la sesión"
 
 #. module: odoo_medical
 #: model:ir.model.fields,field_description:odoo_medical.field_medical_history__state
@@ -2519,12 +2987,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_history__category__surgical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_history_search
 msgid "Surgical"
-msgstr ""
+msgstr "Quirúrgico"
 
 #. module: odoo_medical
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_form
 msgid "Symptoms and Restrictions"
-msgstr ""
+msgstr "Síntomas y Restricciones"
 
 #. module: odoo_medical
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_prescription_line__pharmaceutical_form__syrup
@@ -2537,7 +3005,6 @@ msgid "Systolic Pressure (mmHg)"
 msgstr "Presión Sistólica (mmHg)"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "Systolic pressure must be higher than diastolic pressure."
 msgstr ""
@@ -2556,7 +3023,7 @@ msgstr "Tableta"
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__work_restriction_type__telework
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Telework"
-msgstr ""
+msgstr "Teletrabajo"
 
 #. module: odoo_medical
 #: model:ir.model.fields,help:odoo_medical.field_medical_consultation__patient_vat
@@ -2569,7 +3036,7 @@ msgstr ""
 #. module: odoo_medical
 #: model:ir.model.constraint,message:odoo_medical.constraint_medical_affected_apparatus_name_unique
 msgid "The apparatus name must be unique!"
-msgstr ""
+msgstr "¡El nombre del aparato debe ser único!"
 
 #. module: odoo_medical
 #: model:ir.model.constraint,message:odoo_medical.constraint_medical_treatment_code_unique
@@ -2895,16 +3362,14 @@ msgstr "Tipo de Restricción Laboral"
 #: model:ir.model.fields.selection,name:odoo_medical.selection__medical_consultation__consultation_type__wound_care
 #: model_terms:ir.ui.view,arch_db:odoo_medical.view_medical_consultation_search
 msgid "Wound Care"
-msgstr ""
+msgstr "Curación de Heridas"
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_history.py:0
 msgid "You cannot create recursive group hierarchies."
 msgstr "No puede crear jerarquías de grupo recursivas."
 
 #. module: odoo_medical
-#. odoo-python
 #: code:addons/odoo_medical/models/medical_consultation.py:0
 msgid "You must configure the consultation item and journal."
 msgstr "Debe configurar el item y diario de consulta."

@@ -20,7 +20,13 @@ class MedicalConsultation(models.Model):
     age = fields.Integer(string='Age', compute='_compute_age', store=True)
     consultation_date = fields.Datetime(string='Consultation Date', required=True, default=fields.Datetime.now, tracking=True)
     doctor_id = fields.Many2one('res.users', string='Doctor', required=True, default=lambda self: self.env.user, tracking=True)
-    doctor_license = fields.Char(string='Doctor License Number', tracking=True)
+    doctor_license = fields.Char(
+        string='Doctor License Number',
+        related='doctor_id.doctor_license',
+        store=True,
+        readonly=False,
+        tracking=True,
+    )
     state = fields.Selection([
         ('waiting', 'Waiting'),
         ('in_progress', 'In Progress'),
